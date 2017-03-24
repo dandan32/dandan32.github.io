@@ -89,21 +89,31 @@
 
 
 
-<meta name="description" content="原文出处: zetcode.com   
-关于 PyQt5  【About PyQt5】PyQt5 是Digia的Qt5应用框架的python绑定实现。在 Python2 和 Python3 环境下皆可用。本教程使用 Python3。Qt 是最强大的GUI库之一。PyQt5的官方网站是www.riverbankcomputing.co.uk/news。PyQt5 由 Riverbank Compu">
+<meta name="description" content="原文出处: zetcode.com  
+这一部分将会介绍如何创建菜单、工具栏。 菜单是一组命令的集合，以菜单栏的形式展现。工具栏带有应用的一些命令的按钮。
+主窗口【Main Window】QMainWindow类提供了应用主窗口，能够用于创建典型的具有状态栏、工具栏和菜单栏的应用模式。
+状态栏【Statusbar】状态栏是用于显示状态信息的部件(widget)
+123456789101112131">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyQt5-1 简介 【Introduction】">
-<meta property="og:url" content="http://yoursite.com/2017/03/18/PyQt5-1/index.html">
+<meta property="og:title" content="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">
+<meta property="og:url" content="http://yoursite.com/2017/03/24/PyQt5-3/index.html">
 <meta property="og:site_name" content="DingTing">
-<meta property="og:description" content="原文出处: zetcode.com   
-关于 PyQt5  【About PyQt5】PyQt5 是Digia的Qt5应用框架的python绑定实现。在 Python2 和 Python3 环境下皆可用。本教程使用 Python3。Qt 是最强大的GUI库之一。PyQt5的官方网站是www.riverbankcomputing.co.uk/news。PyQt5 由 Riverbank Compu">
-<meta property="og:image" content="http://zetcode.com/img/gui/pyqt4/pythonlogo.png">
-<meta property="og:updated_time" content="2017-03-24T08:04:43.000Z">
+<meta property="og:description" content="原文出处: zetcode.com  
+这一部分将会介绍如何创建菜单、工具栏。 菜单是一组命令的集合，以菜单栏的形式展现。工具栏带有应用的一些命令的按钮。
+主窗口【Main Window】QMainWindow类提供了应用主窗口，能够用于创建典型的具有状态栏、工具栏和菜单栏的应用模式。
+状态栏【Statusbar】状态栏是用于显示状态信息的部件(widget)
+123456789101112131">
+<meta property="og:image" content="http://yoursite.com/images/PyQt5_3_1.png">
+<meta property="og:image" content="http://yoursite.com/images/PyQt5_3_2.png">
+<meta property="og:updated_time" content="2017-03-24T08:23:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PyQt5-1 简介 【Introduction】">
-<meta name="twitter:description" content="原文出处: zetcode.com   
-关于 PyQt5  【About PyQt5】PyQt5 是Digia的Qt5应用框架的python绑定实现。在 Python2 和 Python3 环境下皆可用。本教程使用 Python3。Qt 是最强大的GUI库之一。PyQt5的官方网站是www.riverbankcomputing.co.uk/news。PyQt5 由 Riverbank Compu">
-<meta name="twitter:image" content="http://zetcode.com/img/gui/pyqt4/pythonlogo.png">
+<meta name="twitter:title" content="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">
+<meta name="twitter:description" content="原文出处: zetcode.com  
+这一部分将会介绍如何创建菜单、工具栏。 菜单是一组命令的集合，以菜单栏的形式展现。工具栏带有应用的一些命令的按钮。
+主窗口【Main Window】QMainWindow类提供了应用主窗口，能够用于创建典型的具有状态栏、工具栏和菜单栏的应用模式。
+状态栏【Statusbar】状态栏是用于显示状态信息的部件(widget)
+123456789101112131">
+<meta name="twitter:image" content="http://yoursite.com/images/PyQt5_3_1.png">
 
 
 
@@ -131,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/18/PyQt5-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/24/PyQt5-3/"/>
 
 
 
 
 
-  <title> PyQt5-1 简介 【Introduction】 | DingTing </title>
+  <title> PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】 | DingTing </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -320,7 +330,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/18/PyQt5-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/PyQt5-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pipi">
@@ -341,7 +351,7 @@
             
             
               
-                PyQt5-1 简介 【Introduction】
+                PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】
               
             
           </h1>
@@ -356,8 +366,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T00:00:15+08:00">
-                2017 年 03 月 18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T15:45:11+08:00">
+                2017 年 03 月 24
               </time>
             
 
@@ -397,8 +407,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/18/PyQt5-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/18/PyQt5-1/" itemprop="commentCount"></span>
+                <a href="/2017/03/24/PyQt5-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/24/PyQt5-3/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -406,7 +416,7 @@
 
           
           
-             <span id="/2017/03/18/PyQt5-1/" class="leancloud_visitors" data-flag-title="PyQt5-1 简介 【Introduction】">
+             <span id="/2017/03/24/PyQt5-3/" class="leancloud_visitors" data-flag-title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,38 +445,22 @@
       
 
       
-        <p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/introduction/" target="_blank" rel="external">zetcode.com</a>   </p>
-<h1 id="关于-PyQt5-【About-PyQt5】"><a href="#关于-PyQt5-【About-PyQt5】" class="headerlink" title="关于 PyQt5  【About PyQt5】"></a>关于 <strong>PyQt5</strong>  【About PyQt5】</h1><p><strong>PyQt5</strong> 是Digia的Qt5应用框架的python绑定实现。在 <strong>Python2</strong> 和 <strong>Python3</strong> 环境下皆可用。本教程使用 <strong>Python3</strong>。<strong>Qt</strong> 是最强大的GUI库之一。<strong>PyQt5</strong>的官方网站是<a href="www.riverbankcomputing.co.uk/news">www.riverbankcomputing.co.uk/news</a>。<strong>PyQt5</strong> 由 Riverbank Computing 开发并维护。</p>
-<p><strong>PyQt5</strong> 以一系列<em>Python</em>模块的形式实现，其具有620个以上的类和6000个函数、方法。它是个跨平台的工具集（Unix、windows、mac）。<strong>PyQt5</strong>使用2个发行协议（GPL 和 商业协议）</p>
-<h1 id="PyQt5-划分为以下几个模块："><a href="#PyQt5-划分为以下几个模块：" class="headerlink" title="PyQt5 划分为以下几个模块："></a><strong>PyQt5</strong> 划分为以下几个模块：</h1><ul>
-<li><strong>QtCore</strong><br>QtCore 模块包含了<em>核心的非GUI功能</em>。此模块用于处理 time、files与 directories、不同的数据类型、流、URLs、mine types、线程或进程。</li>
-<li><strong>QtGui</strong><br>QtGui 包括集成的窗口系统、事件处理、2D Graphics、basic imaging、字体、文本。  </li>
-<li><strong>QtWidgets</strong><br>QtWidgets 提供基本UI元素（以类的方式）创建典型的桌面用户界面。  </li>
-<li><strong>QtMultimedia</strong><br>QtMultimedia 包括处理多媒体内容的类和访问camera、radio功能的Api    </li>
-<li><strong>QtBluetook</strong><br>QtBluetooh 模块包括蓝牙的扫描、链接及交互功能   </li>
-<li><strong>QtNetwork</strong><br>QtNetwork 模块用于网络编程。此模块实现了TCP/IP 和 UDP 客户端、服务器使得网络编程更加简单和可移植。  </li>
-<li><strong>QtPositioning</strong><br>QtPositioning 用于从多种源头获取位置信息；比如 satellite、Wifi、或文本文件。  </li>
-<li><strong>Enginio</strong><br>Enginio 提供了client-side library用于访问Qt Cloud Services Managed Application Runtime。  </li>
-<li><strong>QtWebSockets</strong><br>QtWebSockets 实现了 WebSocket 协议   </li>
-<li><strong>QtWebkit</strong><br>QtWebkit 提供了一个基于WebKit2库的web浏览器实现。  </li>
-<li><strong>QtWebkitWidgets</strong><br>QtWebkitWidgets 提供了在QtWidgets应用中使用的基于Webkit1的浏览器。    </li>
-<li><strong>QtXml</strong><br>QtXml 用于处理xml文件，此模块提供了基于SAX和DOM 的api  </li>
-<li><strong>QtSvg</strong><br>QtSvg 模块用于显示SVG文件。Scalable Vector Graphics (SVG) 是一种用XML描述二维图像、图形应用的语言。  </li>
-<li><strong>QtSql</strong><br>QtSQL 用于数据库相关工作。    </li>
-<li><strong>QtTest</strong><br>QtTest 用于 PyQt5 应用的单元测试。  </li>
-</ul>
-<h1 id="PyQt4-和-PyQt5-的区别-【Difference-between-PyQt4-and-PyQt5】"><a href="#PyQt4-和-PyQt5-的区别-【Difference-between-PyQt4-and-PyQt5】" class="headerlink" title="PyQt4 和 PyQt5 的区别  【Difference between PyQt4 and PyQt5】"></a>PyQt4 和 PyQt5 的区别  【Difference between PyQt4 and PyQt5】</h1><p>PyQt5 并不向后兼容（向下兼容）PyQt4; PyQt5 中发生了几大显著变化。然而把旧版本的代码重构到新的库中并不十分困难。PyQt5与PyQt4 的区别具体为：</p>
-<ol>
-<li><strong>Python</strong> 的模块重新组织。一些模块被丢弃了（比如<strong>QtScript</strong>）,有些被划分到子模块中（比如<strong>QtGui</strong>、 <strong>QtWebKit</strong>）。 引入了新的模块，包括 <strong>QtBluetooth</strong>， <strong>QtPositioning</strong>、<strong>Enginio</strong>。</li>
-<li><strong>PyQt5</strong> 只支持新式的“信号-槽”事件处理机制。<strong>SIGNAL()</strong> 和 <strong>SLOT()</strong> 调用不再被支持。</li>
-<li><strong>PyQt5</strong> 不再支持任何在<strong>Qt v5.0</strong>被声明为<strong>deprecated</strong>（不提倡使用）或<strong>obsolete</strong>（废弃）的 Qt API。  </li>
-</ol>
-<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p><div align="center"><br><img src="http://zetcode.com/img/gui/pyqt4/pythonlogo.png" alt=""><br></div><br>Python 是一种高级、动态、通用、跨平台、解释性、面向对象的编程语言。 Python的设计目的是突出程序员的效率和代码可读性。Python最开始由 <strong>Guido van Rossum</strong> 开发，于1991年首次发布。Python受ABC、Haskell、Java、Lisp、Icon、Perl启发。Python 简洁抽象，最直观的特性之一就是其代码使用缩进代替分号和花括号。Python目前有两大分支-Python2.x、Python3.x，Python3.x打破了向后兼容性，其目的是修正存在的设计错误，使得语言更加干净。Python由世界上的志愿者进行维护，它是开源的，Python是学习编程的理想入门语言。</p>
-<p>本教程使用Python3.x 版本。</p>
-<p>Python支持多种编程类型。它并不规范于特定的范式。Python 支持面向对象 与过程化编程。也提供有限的函数式编程支持。</p>
-<p>Python的官方站点是 python.org</p>
-<p>Perl、Python、 Ruby 是广泛使用的脚本语言。它们存在诸多相同点；互相竞争。 </p>
-<p>本章节是PyQt5 工具集的介绍。  </p>
+        <p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/menustoolbars/" target="_blank" rel="external">zetcode.com</a>  </p>
+<p>这一部分将会介绍如何创建菜单、工具栏。 菜单是一组命令的集合，以菜单栏的形式展现。工具栏带有应用的一些命令的按钮。</p>
+<h1 id="主窗口【Main-Window】"><a href="#主窗口【Main-Window】" class="headerlink" title="主窗口【Main Window】"></a>主窗口【Main Window】</h1><p>QMainWindow类提供了应用主窗口，能够用于创建典型的具有状态栏、工具栏和菜单栏的应用模式。</p>
+<h1 id="状态栏【Statusbar】"><a href="#状态栏【Statusbar】" class="headerlink" title="状态栏【Statusbar】"></a>状态栏【Statusbar】</h1><p>状态栏是用于显示状态信息的部件(widget)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a statusbar.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QApplication</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        self.statusBar().showMessage(<span class="string">'Ready'</span>)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">250</span>, <span class="number">150</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Statusbar'</span>)    </div><div class="line">        self.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
+<p>状态栏在QMainWindow下创建。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">self.statusBar().showMessage(<span class="string">'Ready'</span>)</div></pre></td></tr></table></figure></p>
+<p>通过调用QtGui.QMainWindow的statusBar()方法获得状态栏，首次调用将创建一个状态栏，后续的调用会返回状态栏对象。showMessage() 方法在状态栏显示消息。</p>
+<p><img src="/images/PyQt5_3_1.png" alt=""></p>
+<h1 id="菜单栏-【Menubar】"><a href="#菜单栏-【Menubar】" class="headerlink" title="菜单栏 【Menubar】"></a>菜单栏 【Menubar】</h1><p>菜单栏是常用的GUI应用部分。它包含一组的不同的命令菜单（Mac 的菜单栏有点不同）。为了获得相似的效果，可以使用此方法menubar.setNativeMenuBar(False)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a menubar. The</div><div class="line">menubar has one menu with an exit action.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QAction, qApp, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'&amp;Exit'</span>, self)        </div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div><div class="line">        exitAction.triggered.connect(qApp.quit)</div><div class="line"></div><div class="line">        self.statusBar()</div><div class="line"></div><div class="line">        menubar = self.menuBar()</div><div class="line">        menubar.setNativeMenuBar(<span class="keyword">False</span>)</div><div class="line">        fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">        fileMenu.addAction(exitAction)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Menubar'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
+<p>上面的例子中，新建一个带有菜单的菜单栏。菜单包括一个终止应用的action。同时也新建一个状态栏。action可以通过Ctrl+Q 快捷键触发。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'&amp;Exit'</span>, self)        </div><div class="line">exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div></pre></td></tr></table></figure>
+<p>A QAction is an abstraction for actions performed with a menubar, toolbar, or with a custom keyboard shortcut. In the above three lines, we create an action with a specific icon and an ‘Exit’ label. Furthermore, a shortcut is defined for this action. The third line creates a status tip which is shown in the statusbar when we hover a mouse pointer over the menu item.</p>
+<p>exitAction.triggered.connect(qApp.quit)<br>When we select this particular action, a triggered signal is emitted. The signal is connected to the quit() method of the QApplication widget. This terminates the application.</p>
+<p>menubar = self.menuBar()<br>fileMenu = menubar.addMenu(‘&amp;File’)<br>fileMenu.addAction(exitAction)<br>The menuBar() method creates a menubar. We create a file menu and append the exit action to it.</p>
+<p><img src="/images/PyQt5_3_2.png" alt=""></p>
 
       
     </div>
@@ -516,7 +510,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2017/03/18/PyQt5-1/" title="PyQt5-1 简介 【Introduction】">http://yoursite.com/2017/03/18/PyQt5-1/</a>
+      <a href="http://yoursite.com/2017/03/24/PyQt5-3/" title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">http://yoursite.com/2017/03/24/PyQt5-3/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -545,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/15/hello/" rel="next" title="Hello">
-                <i class="fa fa-chevron-left"></i> Hello
+              <a href="/2017/03/21/PyQt5-2/" rel="next" title="PyQt5-2 第一个程序 【First programs】">
+                <i class="fa fa-chevron-left"></i> PyQt5-2 第一个程序 【First programs】
               </a>
             
           </div>
@@ -554,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/21/PyQt5-2/" rel="prev" title="PyQt5-2 第一个程序 【First programs】">
-                PyQt5-2 第一个程序 【First programs】 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,8 +611,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/18/PyQt5-1/"
-           data-title="PyQt5-1 简介 【Introduction】" data-url="http://yoursite.com/2017/03/18/PyQt5-1/">
+      <div class="ds-thread" data-thread-key="2017/03/24/PyQt5-3/"
+           data-title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】" data-url="http://yoursite.com/2017/03/24/PyQt5-3/">
       </div>
     
   </div>
@@ -746,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于-PyQt5-【About-PyQt5】"><span class="nav-number">1.</span> <span class="nav-text">关于 PyQt5  【About PyQt5】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PyQt5-划分为以下几个模块："><span class="nav-number">2.</span> <span class="nav-text">PyQt5 划分为以下几个模块：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PyQt4-和-PyQt5-的区别-【Difference-between-PyQt4-and-PyQt5】"><span class="nav-number">3.</span> <span class="nav-text">PyQt4 和 PyQt5 的区别  【Difference between PyQt4 and PyQt5】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-number">4.</span> <span class="nav-text">Python</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主窗口【Main-Window】"><span class="nav-number">1.</span> <span class="nav-text">主窗口【Main Window】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态栏【Statusbar】"><span class="nav-number">2.</span> <span class="nav-text">状态栏【Statusbar】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#菜单栏-【Menubar】"><span class="nav-number">3.</span> <span class="nav-text">菜单栏 【Menubar】</span></a></li></ol></div>
             
 
           </div>
