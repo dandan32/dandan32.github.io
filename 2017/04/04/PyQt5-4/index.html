@@ -89,21 +89,39 @@
 
 
 
-<meta name="description" content="原文出处: zetcode.com   
-关于 PyQt5  【About PyQt5】PyQt5 是Digia的Qt5应用框架的python绑定实现。在 Python2 和 Python3 环境下皆可用。本教程使用 Python3。Qt 是最强大的GUI库之一。PyQt5的官方网站是www.riverbankcomputing.co.uk/news。PyQt5 由 Riverbank Compu">
+<meta name="description" content="原文出处: zetcode.com  
+布局管理是GUI 编程一个重要的方面。布局管理是如何在窗口中安排部件的方法。可以通过设置绝对位置、或使用布局类这两种基本方式管理布局。
+绝对布局【Absolute positioning】在像素级别设置每个部件的位置和大小。当使用绝对布局时，需要理解以下的限制：
+
+当改变窗口大小的时候，部件的大小和位置不能更改。
+应用也许在不同平台上显示效果不一致。
+改变应">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyQt5-1 简介 【Introduction】">
-<meta property="og:url" content="http://dandan32.github.io/2017/03/18/PyQt5-1/index.html">
+<meta property="og:title" content="PyQt5-4 布局管理【Layout management in PyQt5】">
+<meta property="og:url" content="http://dandan32.github.io/2017/04/04/PyQt5-4/index.html">
 <meta property="og:site_name" content="DingTing">
-<meta property="og:description" content="原文出处: zetcode.com   
-关于 PyQt5  【About PyQt5】PyQt5 是Digia的Qt5应用框架的python绑定实现。在 Python2 和 Python3 环境下皆可用。本教程使用 Python3。Qt 是最强大的GUI库之一。PyQt5的官方网站是www.riverbankcomputing.co.uk/news。PyQt5 由 Riverbank Compu">
-<meta property="og:image" content="http://zetcode.com/img/gui/pyqt4/pythonlogo.png">
-<meta property="og:updated_time" content="2017-03-24T08:04:43.000Z">
+<meta property="og:description" content="原文出处: zetcode.com  
+布局管理是GUI 编程一个重要的方面。布局管理是如何在窗口中安排部件的方法。可以通过设置绝对位置、或使用布局类这两种基本方式管理布局。
+绝对布局【Absolute positioning】在像素级别设置每个部件的位置和大小。当使用绝对布局时，需要理解以下的限制：
+
+当改变窗口大小的时候，部件的大小和位置不能更改。
+应用也许在不同平台上显示效果不一致。
+改变应">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_4_1.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_4_2.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_4_3.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_4_4.png">
+<meta property="og:updated_time" content="2017-04-05T07:12:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PyQt5-1 简介 【Introduction】">
-<meta name="twitter:description" content="原文出处: zetcode.com   
-关于 PyQt5  【About PyQt5】PyQt5 是Digia的Qt5应用框架的python绑定实现。在 Python2 和 Python3 环境下皆可用。本教程使用 Python3。Qt 是最强大的GUI库之一。PyQt5的官方网站是www.riverbankcomputing.co.uk/news。PyQt5 由 Riverbank Compu">
-<meta name="twitter:image" content="http://zetcode.com/img/gui/pyqt4/pythonlogo.png">
+<meta name="twitter:title" content="PyQt5-4 布局管理【Layout management in PyQt5】">
+<meta name="twitter:description" content="原文出处: zetcode.com  
+布局管理是GUI 编程一个重要的方面。布局管理是如何在窗口中安排部件的方法。可以通过设置绝对位置、或使用布局类这两种基本方式管理布局。
+绝对布局【Absolute positioning】在像素级别设置每个部件的位置和大小。当使用绝对布局时，需要理解以下的限制：
+
+当改变窗口大小的时候，部件的大小和位置不能更改。
+应用也许在不同平台上显示效果不一致。
+改变应">
+<meta name="twitter:image" content="http://dandan32.github.io/images/PyQt5_4_1.png">
 
 
 
@@ -131,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://dandan32.github.io/2017/03/18/PyQt5-1/"/>
+  <link rel="canonical" href="http://dandan32.github.io/2017/04/04/PyQt5-4/"/>
 
 
 
 
 
-  <title> PyQt5-1 简介 【Introduction】 | DingTing </title>
+  <title> PyQt5-4 布局管理【Layout management in PyQt5】 | DingTing </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -320,7 +338,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dandan32.github.io/2017/03/18/PyQt5-1/">
+    <link itemprop="mainEntityOfPage" href="http://dandan32.github.io/2017/04/04/PyQt5-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pipi">
@@ -341,7 +359,7 @@
             
             
               
-                PyQt5-1 简介 【Introduction】
+                PyQt5-4 布局管理【Layout management in PyQt5】
               
             
           </h1>
@@ -356,8 +374,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T00:00:15+08:00">
-                2017 年 03 月 18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-04T15:42:35+08:00">
+                2017 年 04 月 04
               </time>
             
 
@@ -397,8 +415,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/18/PyQt5-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/18/PyQt5-1/" itemprop="commentCount"></span>
+                <a href="/2017/04/04/PyQt5-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/04/PyQt5-4/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -406,7 +424,7 @@
 
           
           
-             <span id="/2017/03/18/PyQt5-1/" class="leancloud_visitors" data-flag-title="PyQt5-1 简介 【Introduction】">
+             <span id="/2017/04/04/PyQt5-4/" class="leancloud_visitors" data-flag-title="PyQt5-4 布局管理【Layout management in PyQt5】">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,38 +453,41 @@
       
 
       
-        <p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/introduction/" target="_blank" rel="external">zetcode.com</a>   </p>
-<h1 id="关于-PyQt5-【About-PyQt5】"><a href="#关于-PyQt5-【About-PyQt5】" class="headerlink" title="关于 PyQt5  【About PyQt5】"></a>关于 <strong>PyQt5</strong>  【About PyQt5】</h1><p><strong>PyQt5</strong> 是Digia的Qt5应用框架的python绑定实现。在 <strong>Python2</strong> 和 <strong>Python3</strong> 环境下皆可用。本教程使用 <strong>Python3</strong>。<strong>Qt</strong> 是最强大的GUI库之一。<strong>PyQt5</strong>的官方网站是<a href="www.riverbankcomputing.co.uk/news">www.riverbankcomputing.co.uk/news</a>。<strong>PyQt5</strong> 由 Riverbank Computing 开发并维护。</p>
-<p><strong>PyQt5</strong> 以一系列<em>Python</em>模块的形式实现，其具有620个以上的类和6000个函数、方法。它是个跨平台的工具集（Unix、windows、mac）。<strong>PyQt5</strong>使用2个发行协议（GPL 和 商业协议）</p>
-<h1 id="PyQt5-划分为以下几个模块："><a href="#PyQt5-划分为以下几个模块：" class="headerlink" title="PyQt5 划分为以下几个模块："></a><strong>PyQt5</strong> 划分为以下几个模块：</h1><ul>
-<li><strong>QtCore</strong><br>QtCore 模块包含了<em>核心的非GUI功能</em>。此模块用于处理 time、files与 directories、不同的数据类型、流、URLs、mine types、线程或进程。</li>
-<li><strong>QtGui</strong><br>QtGui 包括集成的窗口系统、事件处理、2D Graphics、basic imaging、字体、文本。  </li>
-<li><strong>QtWidgets</strong><br>QtWidgets 提供基本UI元素（以类的方式）创建典型的桌面用户界面。  </li>
-<li><strong>QtMultimedia</strong><br>QtMultimedia 包括处理多媒体内容的类和访问camera、radio功能的Api    </li>
-<li><strong>QtBluetook</strong><br>QtBluetooh 模块包括蓝牙的扫描、链接及交互功能   </li>
-<li><strong>QtNetwork</strong><br>QtNetwork 模块用于网络编程。此模块实现了TCP/IP 和 UDP 客户端、服务器使得网络编程更加简单和可移植。  </li>
-<li><strong>QtPositioning</strong><br>QtPositioning 用于从多种源头获取位置信息；比如 satellite、Wifi、或文本文件。  </li>
-<li><strong>Enginio</strong><br>Enginio 提供了client-side library用于访问Qt Cloud Services Managed Application Runtime。  </li>
-<li><strong>QtWebSockets</strong><br>QtWebSockets 实现了 WebSocket 协议   </li>
-<li><strong>QtWebkit</strong><br>QtWebkit 提供了一个基于WebKit2库的web浏览器实现。  </li>
-<li><strong>QtWebkitWidgets</strong><br>QtWebkitWidgets 提供了在QtWidgets应用中使用的基于Webkit1的浏览器。    </li>
-<li><strong>QtXml</strong><br>QtXml 用于处理xml文件，此模块提供了基于SAX和DOM 的api  </li>
-<li><strong>QtSvg</strong><br>QtSvg 模块用于显示SVG文件。Scalable Vector Graphics (SVG) 是一种用XML描述二维图像、图形应用的语言。  </li>
-<li><strong>QtSql</strong><br>QtSQL 用于数据库相关工作。    </li>
-<li><strong>QtTest</strong><br>QtTest 用于 PyQt5 应用的单元测试。  </li>
+        <p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/layout/" target="_blank" rel="external">zetcode.com</a>  </p>
+<p>布局管理是GUI 编程一个重要的方面。布局管理是如何在窗口中安排部件的方法。可以通过设置绝对位置、或使用布局类这两种基本方式管理布局。</p>
+<h1 id="绝对布局【Absolute-positioning】"><a href="#绝对布局【Absolute-positioning】" class="headerlink" title="绝对布局【Absolute positioning】"></a>绝对布局【Absolute positioning】</h1><p>在像素级别设置每个部件的位置和大小。当使用绝对布局时，需要理解以下的限制：</p>
+<ul>
+<li>当改变窗口大小的时候，部件的大小和位置不能更改。</li>
+<li>应用也许在不同平台上显示效果不一致。</li>
+<li>改变应用的字体也许会毁掉布局。</li>
+<li>如果决定改变布局，需要重新设计布局，非常消耗时间、乏味</li>
 </ul>
-<h1 id="PyQt4-和-PyQt5-的区别-【Difference-between-PyQt4-and-PyQt5】"><a href="#PyQt4-和-PyQt5-的区别-【Difference-between-PyQt4-and-PyQt5】" class="headerlink" title="PyQt4 和 PyQt5 的区别  【Difference between PyQt4 and PyQt5】"></a>PyQt4 和 PyQt5 的区别  【Difference between PyQt4 and PyQt5】</h1><p>PyQt5 并不向后兼容（向下兼容）PyQt4; PyQt5 中发生了几大显著变化。然而把旧版本的代码重构到新的库中并不十分困难。PyQt5与PyQt4 的区别具体为：</p>
-<ol>
-<li><strong>Python</strong> 的模块重新组织。一些模块被丢弃了（比如<strong>QtScript</strong>）,有些被划分到子模块中（比如<strong>QtGui</strong>、 <strong>QtWebKit</strong>）。 引入了新的模块，包括 <strong>QtBluetooth</strong>， <strong>QtPositioning</strong>、<strong>Enginio</strong>。</li>
-<li><strong>PyQt5</strong> 只支持新式的“信号-槽”事件处理机制。<strong>SIGNAL()</strong> 和 <strong>SLOT()</strong> 调用不再被支持。</li>
-<li><strong>PyQt5</strong> 不再支持任何在<strong>Qt v5.0</strong>被声明为<strong>deprecated</strong>（不提倡使用）或<strong>obsolete</strong>（废弃）的 Qt API。  </li>
-</ol>
-<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p><div align="center"><br><img src="http://zetcode.com/img/gui/pyqt4/pythonlogo.png" alt=""><br></div><br>Python 是一种高级、动态、通用、跨平台、解释性、面向对象的编程语言。 Python的设计目的是突出程序员的效率和代码可读性。Python最开始由 <strong>Guido van Rossum</strong> 开发，于1991年首次发布。Python受ABC、Haskell、Java、Lisp、Icon、Perl启发。Python 简洁抽象，最直观的特性之一就是其代码使用缩进代替分号和花括号。Python目前有两大分支-Python2.x、Python3.x，Python3.x打破了向后兼容性，其目的是修正存在的设计错误，使得语言更加干净。Python由世界上的志愿者进行维护，它是开源的，Python是学习编程的理想入门语言。</p>
-<p>本教程使用Python3.x 版本。</p>
-<p>Python支持多种编程类型。它并不规范于特定的范式。Python 支持面向对象 与过程化编程。也提供有限的函数式编程支持。</p>
-<p>Python的官方站点是 python.org</p>
-<p>Perl、Python、 Ruby 是广泛使用的脚本语言。它们存在诸多相同点；互相竞争。 </p>
-<p>本章节是PyQt5 工具集的介绍。  </p>
+<p>下面的例子将按绝对布局放置widgets<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This example shows three labels on a window</div><div class="line">using absolute positioning. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QWidget, QLabel, QApplication</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        lbl1 = QLabel(<span class="string">'Zetcode'</span>, self)</div><div class="line">        lbl1.move(<span class="number">15</span>, <span class="number">10</span>)</div><div class="line"></div><div class="line">        lbl2 = QLabel(<span class="string">'tutorials'</span>, self)</div><div class="line">        lbl2.move(<span class="number">35</span>, <span class="number">40</span>)</div><div class="line">        </div><div class="line">        lbl3 = QLabel(<span class="string">'for programmers'</span>, self)</div><div class="line">        lbl3.move(<span class="number">55</span>, <span class="number">70</span>)        </div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">250</span>, <span class="number">150</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Absolute'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure></p>
+<p>使用 move（）方法设置widgets 的位置。 本例子中的widgets都是label，通过设置（x，y） 坐标设置其位置。坐标系统的原点位于左上角。x坐标轴方向由左向右，y坐标轴由上向下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lbl1 = QLabel(<span class="string">'Zetcode'</span>, self)</div><div class="line">lbl1.move(<span class="number">15</span>, <span class="number">10</span>)</div></pre></td></tr></table></figure>
+<p>label widget 位置是 x=15, y = 10</p>
+<p><img src="/images/PyQt5_4_1.png" alt=""></p>
+<h1 id="盒式布局-【Box-layout】"><a href="#盒式布局-【Box-layout】" class="headerlink" title="盒式布局 【Box layout】"></a>盒式布局 【Box layout】</h1><p>布局类管理布局更加灵活和实际。<strong>QHBoxLayout</strong> 和 <strong>QVBoxLayout</strong> 是使weigets 成水平、垂直排列的基类。</p>
+<p>Imagine that we wanted to place two buttons in the right bottom corner. To create such a layout, we will use one horizontal and one vertical box. To create the necessary space, we will add a stretch factor.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">okButton = QPushButton(<span class="string">"OK"</span>)  </div><div class="line">cancelButton = QPushButton(<span class="string">"Cancel"</span>)</div></pre></td></tr></table></figure>
+<p>创建两个按钮<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hbox = QHBoxLayout()</div><div class="line">hbox.addStretch(<span class="number">1</span>)</div><div class="line">hbox.addWidget(okButton)</div><div class="line">hbox.addWidget(cancelButton)</div></pre></td></tr></table></figure></p>
+<p>创建水平布局并添加stretch因子和两个按钮。stretch 添加在两个按钮之前一个可伸缩空间，能够使两个按钮移动到窗口右边。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vbox = QVBoxLayout()</div><div class="line">vbox.addStretch(<span class="number">1</span>)</div><div class="line">vbox.addLayout(hbox)</div></pre></td></tr></table></figure>
+<p>创建一个垂直布局，添加stretch 和 hbox布局，stretch 会令hbox 位于窗口的底部。<br>最后，效果如下：</p>
+<p><img src="/images/PyQt5_4_2.png" alt="">  </p>
+<h1 id="栅格布局-【QGridLayout】"><a href="#栅格布局-【QGridLayout】" class="headerlink" title="栅格布局 【QGridLayout】"></a>栅格布局 【QGridLayout】</h1><p>最通用的布局类是栅格布局，按行列的方式分割空间。QGridLayout 实现了栅格布局。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">In this example, we create a skeleton</div><div class="line">of a calculator using a QGridLayout.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QWidget, QGridLayout, </div><div class="line">    QPushButton, QApplication)</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        grid = QGridLayout()</div><div class="line">        self.setLayout(grid)</div><div class="line"> </div><div class="line">        names = [<span class="string">'Cls'</span>, <span class="string">'Bck'</span>, <span class="string">''</span>, <span class="string">'Close'</span>,</div><div class="line">                 <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>, <span class="string">'/'</span>,</div><div class="line">                <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'*'</span>,</div><div class="line">                 <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'-'</span>,</div><div class="line">                <span class="string">'0'</span>, <span class="string">'.'</span>, <span class="string">'='</span>, <span class="string">'+'</span>]</div><div class="line">        </div><div class="line">        positions = [(i,j) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">4</span>)]</div><div class="line">        </div><div class="line">        <span class="keyword">for</span> position, name <span class="keyword">in</span> zip(positions, names):</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> name == <span class="string">''</span>:</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            button = QPushButton(name)</div><div class="line">            grid.addWidget(button, *position)</div><div class="line">            </div><div class="line">        self.move(<span class="number">300</span>, <span class="number">150</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Calculator'</span>)</div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
+<p>声明在grid中的位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> position, name <span class="keyword">in</span> zip(positions, names):</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> name == <span class="string">''</span>:</div><div class="line">        <span class="keyword">continue</span></div><div class="line">    button = QPushButton(name)</div><div class="line">    grid.addWidget(button, *position)</div></pre></td></tr></table></figure>
+<p>效果如：  </p>
+<p><img src="/images/PyQt5_4_3.png" alt=""></p>
+<h1 id="Review-example"><a href="#Review-example" class="headerlink" title="Review example"></a>Review example</h1><p>在grid 布局中，widgets 可以横垮多个行列。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">In this example, we create a bit</div><div class="line">more complicated window layout using</div><div class="line">the QGridLayout manager. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QWidget, QLabel, QLineEdit, </div><div class="line">    QTextEdit, QGridLayout, QApplication)</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        title = QLabel(<span class="string">'Title'</span>)</div><div class="line">        author = QLabel(<span class="string">'Author'</span>)</div><div class="line">        review = QLabel(<span class="string">'Review'</span>)</div><div class="line"></div><div class="line">        titleEdit = QLineEdit()</div><div class="line">        authorEdit = QLineEdit()</div><div class="line">        reviewEdit = QTextEdit()</div><div class="line"></div><div class="line">        grid = QGridLayout()</div><div class="line">        grid.setSpacing(<span class="number">10</span>)</div><div class="line"></div><div class="line">        grid.addWidget(title, <span class="number">1</span>, <span class="number">0</span>)</div><div class="line">        grid.addWidget(titleEdit, <span class="number">1</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">        grid.addWidget(author, <span class="number">2</span>, <span class="number">0</span>)</div><div class="line">        grid.addWidget(authorEdit, <span class="number">2</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">        grid.addWidget(review, <span class="number">3</span>, <span class="number">0</span>)</div><div class="line">        grid.addWidget(reviewEdit, <span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">1</span>)</div><div class="line">        </div><div class="line">        self.setLayout(grid) </div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">350</span>, <span class="number">300</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Review'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grid = QGridLayout()</div><div class="line">grid.setSpacing(<span class="number">10</span>)</div></pre></td></tr></table></figure>
+<p>创建grid layout 并设置widgets 间距离spacing</p>
+<p>grid.addWidget(reviewEdit, 3, 1, 5, 1)</p>
+<p>设置 reviewEdit 位于第三行，第一列，占5行，1列。</p>
+<p><img src="/images/PyQt5_4_4.png" alt=""></p>
 
       
     </div>
@@ -516,7 +537,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dandan32.github.io/2017/03/18/PyQt5-1/" title="PyQt5-1 简介 【Introduction】">http://dandan32.github.io/2017/03/18/PyQt5-1/</a>
+      <a href="http://dandan32.github.io/2017/04/04/PyQt5-4/" title="PyQt5-4 布局管理【Layout management in PyQt5】">http://dandan32.github.io/2017/04/04/PyQt5-4/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -545,8 +566,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/15/hello/" rel="next" title="Hello">
-                <i class="fa fa-chevron-left"></i> Hello
+              <a href="/2017/03/24/PyQt5-3/" rel="next" title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">
+                <i class="fa fa-chevron-left"></i> PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】
               </a>
             
           </div>
@@ -554,10 +575,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/21/PyQt5-2/" rel="prev" title="PyQt5-2 第一个程序 【First programs】">
-                PyQt5-2 第一个程序 【First programs】 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,8 +638,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/18/PyQt5-1/"
-           data-title="PyQt5-1 简介 【Introduction】" data-url="http://dandan32.github.io/2017/03/18/PyQt5-1/">
+      <div class="ds-thread" data-thread-key="2017/04/04/PyQt5-4/"
+           data-title="PyQt5-4 布局管理【Layout management in PyQt5】" data-url="http://dandan32.github.io/2017/04/04/PyQt5-4/">
       </div>
     
   </div>
@@ -746,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于-PyQt5-【About-PyQt5】"><span class="nav-number">1.</span> <span class="nav-text">关于 PyQt5  【About PyQt5】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PyQt5-划分为以下几个模块："><span class="nav-number">2.</span> <span class="nav-text">PyQt5 划分为以下几个模块：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PyQt4-和-PyQt5-的区别-【Difference-between-PyQt4-and-PyQt5】"><span class="nav-number">3.</span> <span class="nav-text">PyQt4 和 PyQt5 的区别  【Difference between PyQt4 and PyQt5】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-number">4.</span> <span class="nav-text">Python</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绝对布局【Absolute-positioning】"><span class="nav-number">1.</span> <span class="nav-text">绝对布局【Absolute positioning】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#盒式布局-【Box-layout】"><span class="nav-number">2.</span> <span class="nav-text">盒式布局 【Box layout】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栅格布局-【QGridLayout】"><span class="nav-number">3.</span> <span class="nav-text">栅格布局 【QGridLayout】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Review-example"><span class="nav-number">4.</span> <span class="nav-text">Review example</span></a></li></ol></div>
             
 
           </div>

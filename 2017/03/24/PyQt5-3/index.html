@@ -96,16 +96,19 @@
 123456789101112131">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">
-<meta property="og:url" content="http://yoursite.com/2017/03/24/PyQt5-3/index.html">
+<meta property="og:url" content="http://dandan32.github.io/2017/03/24/PyQt5-3/index.html">
 <meta property="og:site_name" content="DingTing">
 <meta property="og:description" content="原文出处: zetcode.com  
 这一部分将会介绍如何创建菜单、工具栏。 菜单是一组命令的集合，以菜单栏的形式展现。工具栏带有应用的一些命令的按钮。
 主窗口【Main Window】QMainWindow类提供了应用主窗口，能够用于创建典型的具有状态栏、工具栏和菜单栏的应用模式。
 状态栏【Statusbar】状态栏是用于显示状态信息的部件(widget)
 123456789101112131">
-<meta property="og:image" content="http://yoursite.com/images/PyQt5_3_1.png">
-<meta property="og:image" content="http://yoursite.com/images/PyQt5_3_2.png">
-<meta property="og:updated_time" content="2017-03-24T08:23:20.000Z">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_3_1.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_3_2.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_3_3.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_3_4.png">
+<meta property="og:image" content="http://dandan32.github.io/images/PyQt5_3_5.png">
+<meta property="og:updated_time" content="2017-03-28T07:26:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">
 <meta name="twitter:description" content="原文出处: zetcode.com  
@@ -113,7 +116,7 @@
 主窗口【Main Window】QMainWindow类提供了应用主窗口，能够用于创建典型的具有状态栏、工具栏和菜单栏的应用模式。
 状态栏【Statusbar】状态栏是用于显示状态信息的部件(widget)
 123456789101112131">
-<meta name="twitter:image" content="http://yoursite.com/images/PyQt5_3_1.png">
+<meta name="twitter:image" content="http://dandan32.github.io/images/PyQt5_3_1.png">
 
 
 
@@ -141,7 +144,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/24/PyQt5-3/"/>
+  <link rel="canonical" href="http://dandan32.github.io/2017/03/24/PyQt5-3/"/>
 
 
 
@@ -330,7 +333,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/PyQt5-3/">
+    <link itemprop="mainEntityOfPage" href="http://dandan32.github.io/2017/03/24/PyQt5-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pipi">
@@ -457,10 +460,24 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a menubar. The</div><div class="line">menubar has one menu with an exit action.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QAction, qApp, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'&amp;Exit'</span>, self)        </div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div><div class="line">        exitAction.triggered.connect(qApp.quit)</div><div class="line"></div><div class="line">        self.statusBar()</div><div class="line"></div><div class="line">        menubar = self.menuBar()</div><div class="line">        menubar.setNativeMenuBar(<span class="keyword">False</span>)</div><div class="line">        fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">        fileMenu.addAction(exitAction)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Menubar'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>上面的例子中，新建一个带有菜单的菜单栏。菜单包括一个终止应用的action。同时也新建一个状态栏。action可以通过Ctrl+Q 快捷键触发。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'&amp;Exit'</span>, self)        </div><div class="line">exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div></pre></td></tr></table></figure>
-<p>A QAction is an abstraction for actions performed with a menubar, toolbar, or with a custom keyboard shortcut. In the above three lines, we create an action with a specific icon and an ‘Exit’ label. Furthermore, a shortcut is defined for this action. The third line creates a status tip which is shown in the statusbar when we hover a mouse pointer over the menu item.</p>
-<p>exitAction.triggered.connect(qApp.quit)<br>When we select this particular action, a triggered signal is emitted. The signal is connected to the quit() method of the QApplication widget. This terminates the application.</p>
-<p>menubar = self.menuBar()<br>fileMenu = menubar.addMenu(‘&amp;File’)<br>fileMenu.addAction(exitAction)<br>The menuBar() method creates a menubar. We create a file menu and append the exit action to it.</p>
-<p><img src="/images/PyQt5_3_2.png" alt=""></p>
+<p>QAction 是菜单栏、工具栏上操作的抽象，可以自定义快捷键。上面的代码创建一个具有图标、“Exit”标签、与快捷键的action。第三行设置状态提示，当鼠标悬停在菜单项上时就会触发。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exitAction.triggered.connect(qApp.quit)</div></pre></td></tr></table></figure>
+<p>当选择特定的action，触发特定的 signal，此 signal 与 QApplication widget的quit() 方法连接，会使应用退出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">menubar = self.menuBar()</div><div class="line">fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">fileMenu.addAction(exitAction)</div></pre></td></tr></table></figure>
+<p>menuBar() 方法创建菜单栏，上面代码中创建了一个 file 菜单，与一个 exitAction 操作。</p>
+<p><img src="/images/PyQt5_3_2.png" alt=""><br><img src="/images/PyQt5_3_3.png" alt="">  </p>
+<h1 id="工具栏-Toolbar"><a href="#工具栏-Toolbar" class="headerlink" title="工具栏 Toolbar"></a>工具栏 Toolbar</h1><p>应用中的所有命令成组的方式放置于菜单中。 工具栏提供了快速访问常用命令的方式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial</div><div class="line"></div><div class="line">This program creates a toolbar.</div><div class="line">The toolbar has one action, which</div><div class="line">terminates the application, if triggered.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com</div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QAction, qApp, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line"></div><div class="line">        self.initUI()</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'Exit'</span>, self)</div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.triggered.connect(qApp.quit)</div><div class="line"></div><div class="line">        self.toolbar = self.addToolBar(<span class="string">'Exit'</span>)</div><div class="line">        self.toolbar.addAction(exitAction)</div><div class="line"></div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Toolbar'</span>)</div><div class="line">        self.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
+<p>上述例子，创建简单的工具栏（带有一个退出action）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">exitAction = QAction(QIcon(<span class="string">'exit24.png'</span>), <span class="string">'Exit'</span>, self)</div><div class="line">exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">exitAction.triggered.connect(qApp.quit)</div></pre></td></tr></table></figure>
+<p>类似于上述的菜单栏，创建 action 对象（具有标签、图标、快捷键），triggered 信号连接到 exit()方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.toolbar = self.addToolBar(<span class="string">'Exit'</span>)</div><div class="line">self.toolbar.addAction(exitAction)</div></pre></td></tr></table></figure>
+<p>创建工具栏。</p>
+<p><img src="/images/PyQt5_3_4.png" alt=""></p>
+<h1 id="集成到一起-Putting-it-together"><a href="#集成到一起-Putting-it-together" class="headerlink" title="集成到一起 Putting it together"></a>集成到一起 Putting it together</h1><p>在本节的最后一个例子中，展示一个带有菜单栏、工具栏、状态栏和 中央widget 的应用例子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a skeleton of</div><div class="line">a classic GUI application with a menubar,</div><div class="line">toolbar, statusbar, and a central widget. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QTextEdit, QAction, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        textEdit = QTextEdit()</div><div class="line">        self.setCentralWidget(textEdit)</div><div class="line"></div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit24.png'</span>), <span class="string">'Exit'</span>, self)</div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div><div class="line">        exitAction.triggered.connect(self.close)</div><div class="line"></div><div class="line">        self.statusBar()</div><div class="line"></div><div class="line">        menubar = self.menuBar()</div><div class="line">        fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">        fileMenu.addAction(exitAction)</div><div class="line"></div><div class="line">        toolbar = self.addToolBar(<span class="string">'Exit'</span>)</div><div class="line">        toolbar.addAction(exitAction)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">350</span>, <span class="number">250</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Main window'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure></p>
+<p>此例子创建了经典的带有菜单栏、工具栏、状态栏的GUI应用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">textEdit = QTextEdit()</div><div class="line">self.setCentralWidget(textEdit)</div></pre></td></tr></table></figure>
+<p>文本编辑控件，处于窗口中心。<br><img src="/images/PyQt5_3_5.png" alt=""></p>
 
       
     </div>
@@ -510,7 +527,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2017/03/24/PyQt5-3/" title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">http://yoursite.com/2017/03/24/PyQt5-3/</a>
+      <a href="http://dandan32.github.io/2017/03/24/PyQt5-3/" title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】">http://dandan32.github.io/2017/03/24/PyQt5-3/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -548,6 +565,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/04/PyQt5-4/" rel="prev" title="PyQt5-4 布局管理【Layout management in PyQt5】">
+                PyQt5-4 布局管理【Layout management in PyQt5】 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -612,7 +633,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/24/PyQt5-3/"
-           data-title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】" data-url="http://yoursite.com/2017/03/24/PyQt5-3/">
+           data-title="PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】" data-url="http://dandan32.github.io/2017/03/24/PyQt5-3/">
       </div>
     
   </div>
@@ -661,7 +682,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -736,7 +757,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主窗口【Main-Window】"><span class="nav-number">1.</span> <span class="nav-text">主窗口【Main Window】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态栏【Statusbar】"><span class="nav-number">2.</span> <span class="nav-text">状态栏【Statusbar】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#菜单栏-【Menubar】"><span class="nav-number">3.</span> <span class="nav-text">菜单栏 【Menubar】</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主窗口【Main-Window】"><span class="nav-number">1.</span> <span class="nav-text">主窗口【Main Window】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态栏【Statusbar】"><span class="nav-number">2.</span> <span class="nav-text">状态栏【Statusbar】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#菜单栏-【Menubar】"><span class="nav-number">3.</span> <span class="nav-text">菜单栏 【Menubar】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具栏-Toolbar"><span class="nav-number">4.</span> <span class="nav-text">工具栏 Toolbar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集成到一起-Putting-it-together"><span class="nav-number">5.</span> <span class="nav-text">集成到一起 Putting it together</span></a></li></ol></div>
             
 
           </div>
