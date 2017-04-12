@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dandan32.github.io/"/>
-  <updated>2017-04-05T07:12:06.000Z</updated>
+  <updated>2017-04-12T14:14:24.000Z</updated>
   <id>http://dandan32.github.io/</id>
   
   <author>
@@ -16,11 +16,234 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>腾讯面试</title>
+    <link href="http://dandan32.github.io/2017/04/11/interview_tencent/"/>
+    <id>http://dandan32.github.io/2017/04/11/interview_tencent/</id>
+    <published>2017-04-11T14:05:41.000Z</published>
+    <updated>2017-04-12T14:14:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>早上大概9:30到的面试现场，签到等候的时候，心里在默默复习面试可能常问的问题。<br>大概10:15分开始进去面试。一开始看到面试官，心情比较紧张，也不知到待会儿面试官会问<br>我些什么呢。谨慎的递上简历后，简历官看了下我的简历。开始问我项目经历，科研方面的<br>问题，还好都是自己做过的东西，介绍起来很轻松，怎么做的怎么说就是了。后来问了下学<br>习和算法，面试官还想考察下我的代码功底，可惜，有些项目没有传到github上。</p>
+<p>面试官对机器人挺感兴趣的，谈话中涉及到很多机器人方面的内容，还有机器学习上的一些<br>问题。面试官感觉很亲切，像大哥哥一样。体验很好的一次面试。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;早上大概9:30到的面试现场，签到等候的时候，心里在默默复习面试可能常问的问题。&lt;br&gt;大概10:15分开始进去面试。一开始看到面试官，心情比较紧张，也不知到待会儿面试官会问&lt;br&gt;我些什么呢。谨慎的递上简历后，简历官看了下我的简历。开始问我项目经历，科研方面的&lt;br&gt;问题
+    
+    </summary>
+    
+      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>操作系统面试</title>
+    <link href="http://dandan32.github.io/2017/04/10/interview_operatingsystem/"/>
+    <id>http://dandan32.github.io/2017/04/10/interview_operatingsystem/</id>
+    <published>2017-04-10T04:41:31.000Z</published>
+    <updated>2017-04-10T05:06:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="进程、线程、协程、管程"><a href="#进程、线程、协程、管程" class="headerlink" title="进程、线程、协程、管程"></a>进程、线程、协程、管程</h1><h1 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h1><ol>
+<li>文件、锁</li>
+<li>管道（半双工、父子进程间使用）</li>
+<li>命名管道fifo（半双工、可以在无亲缘关系进程间通信）</li>
+<li>信号量  </li>
+<li>信号  </li>
+<li>消息队列  </li>
+<li>共享内存  </li>
+<li>套接字  </li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;进程、线程、协程、管程&quot;&gt;&lt;a href=&quot;#进程、线程、协程、管程&quot; class=&quot;headerlink&quot; title=&quot;进程、线程、协程、管程&quot;&gt;&lt;/a&gt;进程、线程、协程、管程&lt;/h1&gt;&lt;h1 id=&quot;进程间通信&quot;&gt;&lt;a href=&quot;#进程间通信&quot; class
+    
+    </summary>
+    
+      <category term="操作系统" scheme="http://dandan32.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="操作系统" scheme="http://dandan32.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础知识点目录</title>
+    <link href="http://dandan32.github.io/2017/04/06/java_index/"/>
+    <id>http://dandan32.github.io/2017/04/06/java_index/</id>
+    <published>2017-04-06T11:36:18.000Z</published>
+    <updated>2017-04-07T08:57:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考资料：</p>
+<ol>
+<li><p><a href="http://docs.oracle.com/javase/specs/jvms/se8/html/index.html" target="_blank" rel="external">《The Java® Virtual Machine Specification(Java SE 8 Edition)》</a><br><a href="http://docs.oracle.com/javase/specs/jvms/se7/html/index.html" target="_blank" rel="external">《Java 虚拟机规范(Java SE 7)》</a><br><a href="http://icyfenix.iteye.com/blog/1256329" target="_blank" rel="external">中文版本</a><br>Java 虚拟机规范 </p>
+</li>
+<li><p><a href="http://docs.oracle.com/javase/specs/jvms/se8/html/index.html" target="_blank" rel="external">《The Java® Virtual Machine Specification(Java SE 8 Edition)》</a><br><a href="http://docs.oracle.com/javase/specs/jls/se7/html/index.html" target="_blank" rel="external">《The Java Language Specification,Java SE 7 Edition》</a><br>Java 语言规范  </p>
+</li>
+<li><p>《Oracle JRockit The Definitive Guide》<br> oracle 出品 JRockit 虚拟机高级使用指南， 2010年7月出版</p>
+</li>
+<li><p>《Inside the Java 2 Virtual Machine,Second Edition》<br> 2000年1月出版，</p>
+</li>
+<li><p>《Java Performance》<br> 只有第3、4、7 章与Java虚拟机相关，是从操作系统到基于Java的上层程序性能度量和调优的全面介绍，其中设计Java虚拟机的内容具备一定的深度和可实践性。  </p>
+</li>
+<li>高级语言虚拟机圈子： 高级语言虚拟机圈子：<a href="http://hllvm.group.iteye.com/" target="_blank" rel="external">http://hllvm.group.iteye.com/</a></li>
+</ol>
+<h1 id="Java-体系结构"><a href="#Java-体系结构" class="headerlink" title="Java 体系结构"></a>Java 体系结构</h1><p>传统意义上，Sun官方定义的Java 体系结构包括：</p>
+<ul>
+<li>Java 程序设计语言</li>
+<li>Java 虚拟机</li>
+<li>Class 文件格式</li>
+<li>Java API 类库</li>
+</ul>
+<h1 id="Jdk-与-JRE-的关系"><a href="#Jdk-与-JRE-的关系" class="headerlink" title="Jdk 与 JRE 的关系"></a>Jdk 与 JRE 的关系</h1><p><img src="/images/JavaBasic/1.png" alt=""></p>
+<h1 id="Java-的4个版本"><a href="#Java-的4个版本" class="headerlink" title="Java 的4个版本"></a>Java 的4个版本</h1><ul>
+<li>Java Card：支持Java小程序(Applets)运行在小内存设备上。</li>
+<li>Java ME ： 对Java API 有所精简，加入对移动设备的支持。</li>
+<li>Java SE ： 提供完整的Java 核心 API，桌面级应用。</li>
+<li>Java EE ： 企业开发，在Java SE API 之外，增加了大量的扩充并提供了相关的部署支持。</li>
+</ul>
+<p><em>扩展一般以javax.\</em>作为包名， 以java.<em> 为包名的都是Java SE API，后来历史发展，一部分扩展包也被划分为核心包了，所以部分核心包也以javax.</em>为包名*</p>
+<h1 id="Java-发展"><a href="#Java-发展" class="headerlink" title="Java 发展"></a>Java 发展</h1><p>JDK 1.2 中细分为J2EE\J2SE\J2ME三个方向，内置了Classic VM、Hotspot VM、Exact VM(只在solaris平台上)，后两个VM 内置 JIT 编译器。添加了 strictfp 关键字与collections 集合类。</p>
+<p>JDK 1.3 主要改进了类库，JNDI 开始作为一项平台级服务提供，使用 CORBA IIOP 实现 RMI 通信协议， 改进了Java2D API, 新增JavaSound类库。</p>
+<p>JDK 1.4 Java走向成熟的标志！新特性：正则表达式、异常链、NIO、日志类、XML解析器、XSLT转换器等。</p>
+<p>JDK 1.5 主要改进易用性，出现的新特性主要有：自动装箱、泛型、动态注解、枚举、可变长参数、遍历循环(foreach)。在虚拟机和API上，改进了Java的内存模型、提供了java.util.concurrent并发包。</p>
+<p>JDK 1.6 转为 Java EE、 Java SE、 Java ME 的命名方式。提供动态语言支持（内置 mozilla JavaScript rhino引擎），提供编译API 和 微型HTTP服务器API等，同时对Java虚拟机内部改动：锁与同步、垃圾收集、类加载等方面。</p>
+<p>JDK 1.7 新的G1收集器、加强对非Java语言的调用支持，升级类加载架构等。</p>
+<p>JDK 1.8 特性：接口添加非抽象的方法实现(default 关键字)、Lambda表达式、函数式接口、方法构造函数引用、全新的日期API、多重注解。</p>
+<h1 id="Java-虚拟机发展"><a href="#Java-虚拟机发展" class="headerlink" title="Java 虚拟机发展"></a>Java 虚拟机发展</h1><h2 id="Sun-Classic-VM-Exact-VM"><a href="#Sun-Classic-VM-Exact-VM" class="headerlink" title="Sun Classic VM/Exact VM"></a>Sun Classic VM/Exact VM</h2><p>Classic VM刚开始不提供JIT编译器，后来通过外挂的方式提供JIT编译器。JIT编译器会完全接管虚拟机的执行系统，解释器和JIT编译器不能同时工作。VM的虚拟机，它的执行系统已经具备现代高性能虚拟机的雏形：如两级即时编译器、编译器与解释器混合工作模式等。Exact VM因它使用准确式内存管理（Exact Memory Management，也可以叫Non-Conservative/Accurate Memory Management）而得名，即虚拟机可以知道内存中某个位置的数据具体是什么类型。  </p>
+<h2 id="Hotspot-VM"><a href="#Hotspot-VM" class="headerlink" title="Hotspot VM"></a>Hotspot VM</h2><p>优点：热点代码探测技术、JIT编译器、混合的运行时系统。后与JRockit vm 整合，添加JRockit的垃圾回收器、MissionControl服务。</p>
+<h2 id="Sun-Mobile-Embedded-VM-Meta-Circular-VM"><a href="#Sun-Mobile-Embedded-VM-Meta-Circular-VM" class="headerlink" title="Sun Mobile-Embedded VM\Meta-Circular VM"></a>Sun Mobile-Embedded VM\Meta-Circular VM</h2><p>移动设备上的 VM</p>
+<h2 id="BEA-JRockit-IBM-J9-VM"><a href="#BEA-JRockit-IBM-J9-VM" class="headerlink" title="BEA JRockit\IBM J9 VM"></a>BEA JRockit\IBM J9 VM</h2><h2 id="Azul-VM-BEA-Liquid-VM"><a href="#Azul-VM-BEA-Liquid-VM" class="headerlink" title="Azul VM\BEA Liquid VM"></a>Azul VM\BEA Liquid VM</h2><p>Azul VM 专有系统上的VM，Azul systems 公司的 Zing JVM 提供接近Vega系统的特性。 </p>
+<p>Liquid VM 不需要操作系统的支持，越过操作系统直接控制硬件。</p>
+<h2 id="Apache-Harmony-Dalvik-VM"><a href="#Apache-Harmony-Dalvik-VM" class="headerlink" title="Apache Harmony\ Dalvik VM"></a>Apache Harmony\ Dalvik VM</h2><p>这两个都不算正规的VM</p>
+<h2 id="Microsoft-JVM"><a href="#Microsoft-JVM" class="headerlink" title="Microsoft JVM"></a>Microsoft JVM</h2><p>微软的JVM 为了在IE 中支持Java小程序，后来抛弃不开发了。</p>
+<h1 id="混合语言"><a href="#混合语言" class="headerlink" title="混合语言"></a>混合语言</h1><p>Clojure、JRuby、Java、Groovy</p>
+<h1 id="多核并行"><a href="#多核并行" class="headerlink" title="多核并行"></a>多核并行</h1><p>JDK 1.7 加入的包java.util.concurrent.forkjoin 扩充了并发框架java.util.concurrent。fork/join 模式！</p>
+<p>Sumatra 项目提供java接入cpu运算能力的工具。</p>
+<h1 id="64位虚拟机"><a href="#64位虚拟机" class="headerlink" title="64位虚拟机"></a>64位虚拟机</h1><p>64位虚拟机性能比32位差？感觉很奇怪。64位的优点是能够提供更大的内存空间。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参考资料：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://docs.oracle.com/javase/specs/jvms/se8/html/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《The Java® Vi
+    
+    </summary>
+    
+      <category term="java" scheme="http://dandan32.github.io/categories/java/"/>
+    
+    
+      <category term="java基础" scheme="http://dandan32.github.io/tags/java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>珠海宽德科技面试</title>
+    <link href="http://dandan32.github.io/2017/04/05/interview_wizardquant/"/>
+    <id>http://dandan32.github.io/2017/04/05/interview_wizardquant/</id>
+    <published>2017-04-05T14:04:42.000Z</published>
+    <updated>2017-04-07T06:00:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>面试过程</p>
+<ol>
+<li>介绍个人的项目经验</li>
+<li>java、操作系统、python等基础知识点</li>
+</ol>
+<h1 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h1><p>简单和面试官介绍了下个人的项目经验，说的并不好，还是需要练习，各种项目指标细节我都没有谈到，只是简单说了下个人负责的功能。</p>
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><ol>
+<li><p>Java 反射能够实现什么？</p>
+</li>
+<li><p>Java gc 如何确定对象需要被清除？</p>
+</li>
+<li><p>Java gc 为什么要分成老年代和新生代？</p>
+</li>
+<li><p>volatile 修饰符作用？ synchronized修饰符作用？</p>
+</li>
+<li><p>Java 无锁类型？ 这个没听清</p>
+</li>
+</ol>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><ol>
+<li><p>cpu 调度方式</p>
+</li>
+<li><p>父子进程fork后共享什么？</p>
+</li>
+<li><p>进程和线程的区别？</p>
+</li>
+<li><p>进程间通信有几种？</p>
+</li>
+<li><p>子进程 fork 后进程空间，CopyOnWrite！！！</p>
+</li>
+</ol>
+<h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><ol>
+<li><p>set 是怎么实现的？</p>
+</li>
+<li><p>如何求 set 的交集？</p>
+</li>
+</ol>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><ol>
+<li><p>如何实现读写分离？ </p>
+</li>
+<li><p>数据库实现同步方式。</p>
+</li>
+</ol>
+<p>问的都挺基础，自己没搞清楚。。。<br>应该也跪了！<br>回家养猪，养猪~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;面试过程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;介绍个人的项目经验&lt;/li&gt;
+&lt;li&gt;java、操作系统、python等基础知识点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;项目经验&quot;&gt;&lt;a href=&quot;#项目经验&quot; class=&quot;headerlink&quot; title=&quot;项目经验&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>珠海习悦面试</title>
+    <link href="http://dandan32.github.io/2017/04/05/interview_thinkjoy/"/>
+    <id>http://dandan32.github.io/2017/04/05/interview_thinkjoy/</id>
+    <published>2017-04-05T12:27:47.000Z</published>
+    <updated>2017-04-07T06:00:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>记一次略感神奇的面试经历~<br>上来先自我介绍了一下<br>然后介绍在做的深度学习抓取物体的实验，介绍个人的深度学习方面看的论文、学习实践情况等</p>
+<p>有点囧啊，其他的问题都没问。。。<br>第一次想主动和面试官说说话！！！<br>可能面试官没面试过几次？<br>也许吧</p>
+<p>后来也没什么消息了，好像进了人才库，什么鬼嘛，想找个实习难了。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记一次略感神奇的面试经历~&lt;br&gt;上来先自我介绍了一下&lt;br&gt;然后介绍在做的深度学习抓取物体的实验，介绍个人的深度学习方面看的论文、学习实践情况等&lt;/p&gt;
+&lt;p&gt;有点囧啊，其他的问题都没问。。。&lt;br&gt;第一次想主动和面试官说说话！！！&lt;br&gt;可能面试官没面试过几次？&lt;br&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PyQt5-4 布局管理【Layout management in PyQt5】</title>
-    <link href="http://dandan32.github.io/2017/04/04/PyQt5-4/"/>
-    <id>http://dandan32.github.io/2017/04/04/PyQt5-4/</id>
+    <link href="http://dandan32.github.io/2017/04/04/PyQt5_4/"/>
+    <id>http://dandan32.github.io/2017/04/04/PyQt5_4/</id>
     <published>2017-04-04T07:42:35.000Z</published>
-    <updated>2017-04-05T07:12:06.000Z</updated>
+    <updated>2017-04-07T06:00:25.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/layout/" target="_blank" rel="external">zetcode.com</a>  </p>
 <p>布局管理是GUI 编程一个重要的方面。布局管理是如何在窗口中安排部件的方法。可以通过设置绝对位置、或使用布局类这两种基本方式管理布局。</p>
@@ -35,7 +258,7 @@
 <p>使用 move（）方法设置widgets 的位置。 本例子中的widgets都是label，通过设置（x，y） 坐标设置其位置。坐标系统的原点位于左上角。x坐标轴方向由左向右，y坐标轴由上向下。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lbl1 = QLabel(<span class="string">'Zetcode'</span>, self)</div><div class="line">lbl1.move(<span class="number">15</span>, <span class="number">10</span>)</div></pre></td></tr></table></figure>
 <p>label widget 位置是 x=15, y = 10</p>
-<p><img src="/images/PyQt5_4_1.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_4_1.png" alt=""></p>
 <h1 id="盒式布局-【Box-layout】"><a href="#盒式布局-【Box-layout】" class="headerlink" title="盒式布局 【Box layout】"></a>盒式布局 【Box layout】</h1><p>布局类管理布局更加灵活和实际。<strong>QHBoxLayout</strong> 和 <strong>QVBoxLayout</strong> 是使weigets 成水平、垂直排列的基类。</p>
 <p>Imagine that we wanted to place two buttons in the right bottom corner. To create such a layout, we will use one horizontal and one vertical box. To create the necessary space, we will add a stretch factor.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">okButton = QPushButton(<span class="string">"OK"</span>)  </div><div class="line">cancelButton = QPushButton(<span class="string">"Cancel"</span>)</div></pre></td></tr></table></figure>
@@ -43,20 +266,20 @@
 <p>创建水平布局并添加stretch因子和两个按钮。stretch 添加在两个按钮之前一个可伸缩空间，能够使两个按钮移动到窗口右边。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vbox = QVBoxLayout()</div><div class="line">vbox.addStretch(<span class="number">1</span>)</div><div class="line">vbox.addLayout(hbox)</div></pre></td></tr></table></figure>
 <p>创建一个垂直布局，添加stretch 和 hbox布局，stretch 会令hbox 位于窗口的底部。<br>最后，效果如下：</p>
-<p><img src="/images/PyQt5_4_2.png" alt="">  </p>
+<p><img src="/images/PyQt/PyQt5_4_2.png" alt="">  </p>
 <h1 id="栅格布局-【QGridLayout】"><a href="#栅格布局-【QGridLayout】" class="headerlink" title="栅格布局 【QGridLayout】"></a>栅格布局 【QGridLayout】</h1><p>最通用的布局类是栅格布局，按行列的方式分割空间。QGridLayout 实现了栅格布局。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">In this example, we create a skeleton</div><div class="line">of a calculator using a QGridLayout.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QWidget, QGridLayout, </div><div class="line">    QPushButton, QApplication)</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        grid = QGridLayout()</div><div class="line">        self.setLayout(grid)</div><div class="line"> </div><div class="line">        names = [<span class="string">'Cls'</span>, <span class="string">'Bck'</span>, <span class="string">''</span>, <span class="string">'Close'</span>,</div><div class="line">                 <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>, <span class="string">'/'</span>,</div><div class="line">                <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'*'</span>,</div><div class="line">                 <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'-'</span>,</div><div class="line">                <span class="string">'0'</span>, <span class="string">'.'</span>, <span class="string">'='</span>, <span class="string">'+'</span>]</div><div class="line">        </div><div class="line">        positions = [(i,j) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">4</span>)]</div><div class="line">        </div><div class="line">        <span class="keyword">for</span> position, name <span class="keyword">in</span> zip(positions, names):</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> name == <span class="string">''</span>:</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            button = QPushButton(name)</div><div class="line">            grid.addWidget(button, *position)</div><div class="line">            </div><div class="line">        self.move(<span class="number">300</span>, <span class="number">150</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Calculator'</span>)</div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>声明在grid中的位置：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> position, name <span class="keyword">in</span> zip(positions, names):</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> name == <span class="string">''</span>:</div><div class="line">        <span class="keyword">continue</span></div><div class="line">    button = QPushButton(name)</div><div class="line">    grid.addWidget(button, *position)</div></pre></td></tr></table></figure>
 <p>效果如：  </p>
-<p><img src="/images/PyQt5_4_3.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_4_3.png" alt=""></p>
 <h1 id="Review-example"><a href="#Review-example" class="headerlink" title="Review example"></a>Review example</h1><p>在grid 布局中，widgets 可以横垮多个行列。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">In this example, we create a bit</div><div class="line">more complicated window layout using</div><div class="line">the QGridLayout manager. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QWidget, QLabel, QLineEdit, </div><div class="line">    QTextEdit, QGridLayout, QApplication)</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        title = QLabel(<span class="string">'Title'</span>)</div><div class="line">        author = QLabel(<span class="string">'Author'</span>)</div><div class="line">        review = QLabel(<span class="string">'Review'</span>)</div><div class="line"></div><div class="line">        titleEdit = QLineEdit()</div><div class="line">        authorEdit = QLineEdit()</div><div class="line">        reviewEdit = QTextEdit()</div><div class="line"></div><div class="line">        grid = QGridLayout()</div><div class="line">        grid.setSpacing(<span class="number">10</span>)</div><div class="line"></div><div class="line">        grid.addWidget(title, <span class="number">1</span>, <span class="number">0</span>)</div><div class="line">        grid.addWidget(titleEdit, <span class="number">1</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">        grid.addWidget(author, <span class="number">2</span>, <span class="number">0</span>)</div><div class="line">        grid.addWidget(authorEdit, <span class="number">2</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">        grid.addWidget(review, <span class="number">3</span>, <span class="number">0</span>)</div><div class="line">        grid.addWidget(reviewEdit, <span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">1</span>)</div><div class="line">        </div><div class="line">        self.setLayout(grid) </div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">350</span>, <span class="number">300</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Review'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grid = QGridLayout()</div><div class="line">grid.setSpacing(<span class="number">10</span>)</div></pre></td></tr></table></figure>
 <p>创建grid layout 并设置widgets 间距离spacing</p>
 <p>grid.addWidget(reviewEdit, 3, 1, 5, 1)</p>
 <p>设置 reviewEdit 位于第三行，第一列，占5行，1列。</p>
-<p><img src="/images/PyQt5_4_4.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_4_4.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -75,10 +298,10 @@
   
   <entry>
     <title>PyQt5-3 PyQt5 的菜单、工具栏【Menus and toolbars in PyQt5】</title>
-    <link href="http://dandan32.github.io/2017/03/24/PyQt5-3/"/>
-    <id>http://dandan32.github.io/2017/03/24/PyQt5-3/</id>
+    <link href="http://dandan32.github.io/2017/03/24/PyQt5_3/"/>
+    <id>http://dandan32.github.io/2017/03/24/PyQt5_3/</id>
     <published>2017-03-24T07:45:11.000Z</published>
-    <updated>2017-03-28T07:26:57.000Z</updated>
+    <updated>2017-04-07T06:00:25.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/menustoolbars/" target="_blank" rel="external">zetcode.com</a>  </p>
 <p>这一部分将会介绍如何创建菜单、工具栏。 菜单是一组命令的集合，以菜单栏的形式展现。工具栏带有应用的一些命令的按钮。</p>
@@ -87,7 +310,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a statusbar.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QApplication</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        self.statusBar().showMessage(<span class="string">'Ready'</span>)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">250</span>, <span class="number">150</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Statusbar'</span>)    </div><div class="line">        self.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>状态栏在QMainWindow下创建。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">self.statusBar().showMessage(<span class="string">'Ready'</span>)</div></pre></td></tr></table></figure></p>
 <p>通过调用QtGui.QMainWindow的statusBar()方法获得状态栏，首次调用将创建一个状态栏，后续的调用会返回状态栏对象。showMessage() 方法在状态栏显示消息。</p>
-<p><img src="/images/PyQt5_3_1.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_3_1.png" alt=""></p>
 <h1 id="菜单栏-【Menubar】"><a href="#菜单栏-【Menubar】" class="headerlink" title="菜单栏 【Menubar】"></a>菜单栏 【Menubar】</h1><p>菜单栏是常用的GUI应用部分。它包含一组的不同的命令菜单（Mac 的菜单栏有点不同）。为了获得相似的效果，可以使用此方法menubar.setNativeMenuBar(False)。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a menubar. The</div><div class="line">menubar has one menu with an exit action.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QAction, qApp, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'&amp;Exit'</span>, self)        </div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div><div class="line">        exitAction.triggered.connect(qApp.quit)</div><div class="line"></div><div class="line">        self.statusBar()</div><div class="line"></div><div class="line">        menubar = self.menuBar()</div><div class="line">        menubar.setNativeMenuBar(<span class="keyword">False</span>)</div><div class="line">        fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">        fileMenu.addAction(exitAction)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Menubar'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>上面的例子中，新建一个带有菜单的菜单栏。菜单包括一个终止应用的action。同时也新建一个状态栏。action可以通过Ctrl+Q 快捷键触发。</p>
@@ -97,7 +320,7 @@
 <p>当选择特定的action，触发特定的 signal，此 signal 与 QApplication widget的quit() 方法连接，会使应用退出。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">menubar = self.menuBar()</div><div class="line">fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">fileMenu.addAction(exitAction)</div></pre></td></tr></table></figure>
 <p>menuBar() 方法创建菜单栏，上面代码中创建了一个 file 菜单，与一个 exitAction 操作。</p>
-<p><img src="/images/PyQt5_3_2.png" alt=""><br><img src="/images/PyQt5_3_3.png" alt="">  </p>
+<p><img src="/images/PyQt/PyQt5_3_2.png" alt=""><br><img src="/images/PyQt/PyQt5_3_3.png" alt="">  </p>
 <h1 id="工具栏-Toolbar"><a href="#工具栏-Toolbar" class="headerlink" title="工具栏 Toolbar"></a>工具栏 Toolbar</h1><p>应用中的所有命令成组的方式放置于菜单中。 工具栏提供了快速访问常用命令的方式。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial</div><div class="line"></div><div class="line">This program creates a toolbar.</div><div class="line">The toolbar has one action, which</div><div class="line">terminates the application, if triggered.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com</div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QAction, qApp, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line"></div><div class="line">        self.initUI()</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit.png'</span>), <span class="string">'Exit'</span>, self)</div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.triggered.connect(qApp.quit)</div><div class="line"></div><div class="line">        self.toolbar = self.addToolBar(<span class="string">'Exit'</span>)</div><div class="line">        self.toolbar.addAction(exitAction)</div><div class="line"></div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Toolbar'</span>)</div><div class="line">        self.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>上述例子，创建简单的工具栏（带有一个退出action）。</p>
@@ -105,11 +328,11 @@
 <p>类似于上述的菜单栏，创建 action 对象（具有标签、图标、快捷键），triggered 信号连接到 exit()方法。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.toolbar = self.addToolBar(<span class="string">'Exit'</span>)</div><div class="line">self.toolbar.addAction(exitAction)</div></pre></td></tr></table></figure>
 <p>创建工具栏。</p>
-<p><img src="/images/PyQt5_3_4.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_3_4.png" alt=""></p>
 <h1 id="集成到一起-Putting-it-together"><a href="#集成到一起-Putting-it-together" class="headerlink" title="集成到一起 Putting it together"></a>集成到一起 Putting it together</h1><p>在本节的最后一个例子中，展示一个带有菜单栏、工具栏、状态栏和 中央widget 的应用例子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program creates a skeleton of</div><div class="line">a classic GUI application with a menubar,</div><div class="line">toolbar, statusbar, and a central widget. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QMainWindow, QTextEdit, QAction, QApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QMainWindow)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        textEdit = QTextEdit()</div><div class="line">        self.setCentralWidget(textEdit)</div><div class="line"></div><div class="line">        exitAction = QAction(QIcon(<span class="string">'exit24.png'</span>), <span class="string">'Exit'</span>, self)</div><div class="line">        exitAction.setShortcut(<span class="string">'Ctrl+Q'</span>)</div><div class="line">        exitAction.setStatusTip(<span class="string">'Exit application'</span>)</div><div class="line">        exitAction.triggered.connect(self.close)</div><div class="line"></div><div class="line">        self.statusBar()</div><div class="line"></div><div class="line">        menubar = self.menuBar()</div><div class="line">        fileMenu = menubar.addMenu(<span class="string">'&amp;File'</span>)</div><div class="line">        fileMenu.addAction(exitAction)</div><div class="line"></div><div class="line">        toolbar = self.addToolBar(<span class="string">'Exit'</span>)</div><div class="line">        toolbar.addAction(exitAction)</div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">350</span>, <span class="number">250</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Main window'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure></p>
 <p>此例子创建了经典的带有菜单栏、工具栏、状态栏的GUI应用。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">textEdit = QTextEdit()</div><div class="line">self.setCentralWidget(textEdit)</div></pre></td></tr></table></figure>
-<p>文本编辑控件，处于窗口中心。<br><img src="/images/PyQt5_3_5.png" alt=""></p>
+<p>文本编辑控件，处于窗口中心。<br><img src="/images/PyQt/PyQt5_3_5.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -128,10 +351,10 @@
   
   <entry>
     <title>PyQt5-2 第一个程序 【First programs】</title>
-    <link href="http://dandan32.github.io/2017/03/21/PyQt5-2/"/>
-    <id>http://dandan32.github.io/2017/03/21/PyQt5-2/</id>
+    <link href="http://dandan32.github.io/2017/03/21/PyQt5_2/"/>
+    <id>http://dandan32.github.io/2017/03/21/PyQt5_2/</id>
     <published>2017-03-21T04:58:40.000Z</published>
-    <updated>2017-03-24T08:04:45.000Z</updated>
+    <updated>2017-04-07T06:00:25.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/firstprograms/" target="_blank" rel="external">zetcode.com</a>  </p>
 <h1 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h1><p>该例子显示一个小窗口。可以利用这个窗口完成很多事情，比如调整大小、最大化、最小化。而这需要大量的代码。已经内置了此部分代码，因为此部分代码在大多数程序中都需要使用，不需要重复编码此部分功能。PyQt5是一个高级的工具集，如果使用低级别的工具集开发编码，以下的例子很可能产生上百行代码。  </p>
@@ -147,10 +370,10 @@
 <p>设置窗口的标题。表示在标题栏展示。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">w.show()</div></pre></td></tr></table></figure></p>
 <p><strong>show()</strong>在窗口上显示部件。部件首先在内存中创建，然后在屏幕上展示。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sys.exit(app.exec_())</div></pre></td></tr></table></figure></p>
 <p>最后，进入应用主循环。事件处理从此调用开始。主循环从窗口系统接收事件、把分发事件到应用部件。当<strong>exit()</strong>调用或主部件销毁即引发主循环结束。<strong>sys.exit()</strong> 方法确保干净的退出，通知系统应用如何退出。</p>
-<p><strong>exec_()</strong> 方法包含一个下划线。 因为exec 是Python的关键字,因此使用<strong>exec_()</strong>代替。<br><img src="/images/PyQt5_2_1.png" alt=""></p>
+<p><strong>exec_()</strong> 方法包含一个下划线。 因为exec 是Python的关键字,因此使用<strong>exec_()</strong>代替。<br><img src="/images/PyQt/PyQt5_2_1.png" alt=""></p>
 <h1 id="应用程序图标-application-icon"><a href="#应用程序图标-application-icon" class="headerlink" title="应用程序图标  (application icon)"></a>应用程序图标  (application icon)</h1><p>应用图标是标题栏左上角显示的小图像，接下来的例子会教大家如何在PyQt5中实现应用图标，顺带介绍一些新的方法调用。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This example shows an icon</div><div class="line">in the titlebar of the window.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QWidget</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QIcon</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">220</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Icon'</span>)</div><div class="line">        self.setWindowIcon(QIcon(<span class="string">'./image/web.png'</span>))        </div><div class="line">    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
-<p><img src="/images/PyQt5_2_2.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_2_2.png" alt=""></p>
 <h1 id="提示-（Tooltip）"><a href="#提示-（Tooltip）" class="headerlink" title="提示 （Tooltip）"></a>提示 （Tooltip）</h1><p>对每一个部件可以提供一个帮助提示<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This example shows a tooltip on </div><div class="line">a window and a button.</div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QWidget, QToolTip, </div><div class="line">    QPushButton, QApplication)</div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QFont    </div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        QToolTip.setFont(QFont(<span class="string">'SansSerif'</span>, <span class="number">10</span>))</div><div class="line">        </div><div class="line">        self.setToolTip(<span class="string">'This is a &lt;b&gt;QWidget&lt;/b&gt; widget'</span>)</div><div class="line">        </div><div class="line">        btn = QPushButton(<span class="string">'Button'</span>, self)</div><div class="line">        btn.setToolTip(<span class="string">'This is a &lt;b&gt;QPushButton&lt;/b&gt; widget'</span>)</div><div class="line">        btn.resize(btn.sizeHint())</div><div class="line">        btn.move(<span class="number">50</span>, <span class="number">50</span>)       </div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>)</div><div class="line">        self.setWindowTitle(<span class="string">'Tooltips'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure></p>
 <p>本例中展现了如何为PyQt5 部件添加 tooltip。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">QToolTip.setFont(QFont(<span class="string">'SansSerif'</span>, <span class="number">10</span>))</div></pre></td></tr></table></figure>
@@ -161,7 +384,7 @@
 <p>添加push button 部件，及为push button 设置tooltip。 </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">btn.resize(btn.sizeHint())</div><div class="line">btn.move(<span class="number">50</span>, <span class="number">50</span>)</div></pre></td></tr></table></figure>
 <p>button 在窗口中重新设置大小、移动位置。 sizeHint() 使得 button 能够获得一个推荐适当的大小。</p>
-<p><img src="/images/PyQt5_2_3.png" alt=""><br>Figure: Tooltip</p>
+<p><img src="/images/PyQt/PyQt5_2_3.png" alt=""><br>Figure: Tooltip</p>
 <h1 id="关闭窗口"><a href="#关闭窗口" class="headerlink" title="关闭窗口"></a>关闭窗口</h1><p>关闭窗口最明显的方式就是“点击标题栏的x标记”。在下一个例子中，我们会展示如何通过编码的方式关闭窗口。我们会开始接触到signals(信号)和 slots(槽) 。</p>
 <p>下面是QPushButton 部件的构造函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">QPushButton(string text, QWidget parent = <span class="keyword">None</span>)</div></pre></td></tr></table></figure></p>
 <p>text 参数是button上显示的文本。parent 是放置 button 的部件(widget). 在本例中他就是一个QWidget。应用中的Widegets形成层次结构，大多数Widget都有其parent，没有parent的Widgets是顶层的窗口.</p>
@@ -172,14 +395,14 @@
 <p>我们新建了一个QPushButton的实例。构造函数的第一个参数是按钮的标签，第二个参数是widget的parent。此处的parent是继承的QWidget对象。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qbtn.clicked.connect(QCoreApplication.instance().quit)</div></pre></td></tr></table></figure>
 <p>PyQt5的事件处理系统构建与 signal 和 slot 机制之上。如果我们点击按钮，信号就会被激发。slot 可以是一个Qt槽、或者python 可调用对象。QCoreApplication 包括一个主事件循环（处理和分发事件循环）；instance()方法返回一个当前实例。注意：QCoreApplication 是与 QApplication 一起创建的。clicked信号连接到quit()方法【quit方法用于结束应用】。接收者（push button）和发送者（application object）中负责互相通讯。</p>
-<p><img src="/images/PyQt5_2_4.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_2_4.png" alt=""></p>
 <h1 id="消息框（Message-Box）"><a href="#消息框（Message-Box）" class="headerlink" title="消息框（Message Box）"></a>消息框（Message Box）</h1><p>默认情况下，如果点击标题栏的关闭按钮（x），QWidget 将被关闭。在某些情况下需要对这种行为进行修改，比如：编辑器中有仍未保存的被修改的文件，应该在关闭时出现一个确认行为。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program shows a confirmation </div><div class="line">message box when we click on the close</div><div class="line">button of the application window. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QWidget, QMessageBox, QApplication</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">250</span>, <span class="number">150</span>)        </div><div class="line">        self.setWindowTitle(<span class="string">'Message box'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">closeEvent</span><span class="params">(self, event)</span>:</span></div><div class="line">        </div><div class="line">        reply = QMessageBox.question(self, <span class="string">'Message'</span>,</div><div class="line">            <span class="string">"Are you sure to quit?"</span>, QMessageBox.Yes | </div><div class="line">            QMessageBox.No, QMessageBox.No)</div><div class="line"></div><div class="line">        <span class="keyword">if</span> reply == QMessageBox.Yes:</div><div class="line">            event.accept()</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            event.ignore()        </div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>当关闭此QWidget时，触发QCloseEvent事件，通过重写closeEvent()事件控制方法修改默认的关闭行为。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">reply = QMessageBox.question(self, <span class="string">'Message'</span>,</div><div class="line">    <span class="string">"Are you sure to quit?"</span>, QMessageBox.Yes | </div><div class="line">    QMessageBox.No, QMessageBox.No)</div></pre></td></tr></table></figure></p>
 <p>显示一个带有两个按钮的消息框（yes 和 no）。第一个 字符串 参数在标题栏显示。第二个 字符串 参数是在对话框中显示的，第三个参数定义了出现在消息框中的按钮。最后一个参数定义默认的按钮。返回值传递给reply。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> reply == QtGui.QMessageBox.Yes:</div><div class="line">    event.accept()</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    event.ignore()</div></pre></td></tr></table></figure>
 <p>此处根据返回值判断是否关闭窗口，点击“yes”即接受事件，关闭widget和终止应用。否者，忽视此事件。</p>
-<p><img src="/images/PyQt5_2_5.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_2_5.png" alt=""></p>
 <h1 id="屏幕居中（centering-window-on-the-screen）"><a href="#屏幕居中（centering-window-on-the-screen）" class="headerlink" title="屏幕居中（centering window on the screen）"></a>屏幕居中（centering window on the screen）</h1><p>此例展示如何在屏幕居中显示应用</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">ZetCode PyQt5 tutorial </div><div class="line"></div><div class="line">This program centers a window </div><div class="line">on the screen. </div><div class="line"></div><div class="line">author: Jan Bodnar</div><div class="line">website: zetcode.com </div><div class="line">last edited: January 2015</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QWidget, QDesktopWidget, QApplication</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        super().__init__()</div><div class="line">        </div><div class="line">        self.initUI()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span>               </div><div class="line">        </div><div class="line">        self.resize(<span class="number">250</span>, <span class="number">150</span>)</div><div class="line">        self.center()</div><div class="line">        </div><div class="line">        self.setWindowTitle(<span class="string">'Center'</span>)    </div><div class="line">        self.show()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">center</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        qr = self.frameGeometry()</div><div class="line">        cp = QDesktopWidget().availableGeometry().center()</div><div class="line">        qr.moveCenter(cp)</div><div class="line">        self.move(qr.topLeft())</div><div class="line">        </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    </div><div class="line">    app = QApplication(sys.argv)</div><div class="line">    ex = Example()</div><div class="line">    sys.exit(app.exec_())</div></pre></td></tr></table></figure>
 <p>QtGui.QDesktopWidget 类提供了用户桌面的相关信息，包括桌面尺寸。</p>
@@ -193,7 +416,7 @@
 <p>将窗口的中心位置移动到屏幕的中心，窗口的大小并不发生变化</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">self.move(qr.topLeft())</div></pre></td></tr></table></figure>
 <p>移动窗口的左上角到移动到qr的左上角，这样窗口就在屏幕的正中央了。</p>
-<p><img src="/images/PyQt5_2_6.png" alt=""></p>
+<p><img src="/images/PyQt/PyQt5_2_6.png" alt=""></p>
 <p>这部分介绍了一些基本PyQt5 知识。</p>
 ]]></content>
     
@@ -213,10 +436,10 @@
   
   <entry>
     <title>PyQt5-1 简介 【Introduction】</title>
-    <link href="http://dandan32.github.io/2017/03/18/PyQt5-1/"/>
-    <id>http://dandan32.github.io/2017/03/18/PyQt5-1/</id>
+    <link href="http://dandan32.github.io/2017/03/18/PyQt5_1/"/>
+    <id>http://dandan32.github.io/2017/03/18/PyQt5_1/</id>
     <published>2017-03-17T16:00:15.000Z</published>
-    <updated>2017-03-24T08:04:43.000Z</updated>
+    <updated>2017-04-07T06:00:25.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>原文出处:</em> <a href="http://zetcode.com/gui/pyqt5/introduction/" target="_blank" rel="external">zetcode.com</a>   </p>
 <h1 id="关于-PyQt5-【About-PyQt5】"><a href="#关于-PyQt5-【About-PyQt5】" class="headerlink" title="关于 PyQt5  【About PyQt5】"></a>关于 <strong>PyQt5</strong>  【About PyQt5】</h1><p><strong>PyQt5</strong> 是Digia的Qt5应用框架的python绑定实现。在 <strong>Python2</strong> 和 <strong>Python3</strong> 环境下皆可用。本教程使用 <strong>Python3</strong>。<strong>Qt</strong> 是最强大的GUI库之一。<strong>PyQt5</strong>的官方网站是<a href="www.riverbankcomputing.co.uk/news">www.riverbankcomputing.co.uk/news</a>。<strong>PyQt5</strong> 由 Riverbank Computing 开发并维护。</p>
@@ -267,21 +490,30 @@
   </entry>
   
   <entry>
-    <title>Hello</title>
+    <title>First Blog</title>
     <link href="http://dandan32.github.io/2017/03/15/hello/"/>
     <id>http://dandan32.github.io/2017/03/15/hello/</id>
     <published>2017-03-15T03:48:00.000Z</published>
-    <updated>2017-03-24T04:35:23.000Z</updated>
+    <updated>2017-04-07T06:00:25.000Z</updated>
     
-    <content type="html"><![CDATA[<p>不可避俗的来一句：hello world!   </p>
-<p>很想做个人博客，静态博客工具提供了一种很廉价的创建博客方式！<br>在<strong>pelican、hugo、hexo</strong>三者中，我最终选择了hexo 与其中的 next 主题。真的很感谢hexo 与next主题的创建者们！！！！  </p>
+    <content type="html"><![CDATA[<h1 id="不可避俗的来一句：hello-world"><a href="#不可避俗的来一句：hello-world" class="headerlink" title="不可避俗的来一句：hello world!"></a>不可避俗的来一句：hello world!</h1><p>很想做个人博客，静态博客工具提供了一种很廉价的创建博客方式！<br>在<strong>pelican、hugo、hexo</strong>三者中，我最终选择了hexo 与其中的 next 主题。真的很感谢hexo 与next主题的创建者们！！！！  </p>
 <p>原本有想法自己做一个~<br>但是自从看到这么优秀的框架后，就打消了这个念头！！！<br>界面很优秀、很有趣！  </p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>结合github 提供的 pages 服务构建个人网站。<br>简单记录一下配置过程：</p>
+<h2 id="安装-node-npm"><a href="#安装-node-npm" class="headerlink" title="安装 node\npm"></a>安装 node\npm</h2><p>这个参考网上教程就好，注意设置环境变量</p>
+<h2 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 hexo</span></div><div class="line">npm install hexo-cli -g</div><div class="line"></div><div class="line"><span class="comment"># 初始化博客</span></div><div class="line">hexo init &lt;博客位置&gt;</div><div class="line">cd &lt;博客位置&gt;</div><div class="line"><span class="comment"># 安装相应依赖</span></div><div class="line">npm install</div><div class="line"><span class="comment"># 本地搜索插件</span></div><div class="line">npm install hexo-generator-searchdb --save</div><div class="line"><span class="comment">#　启动ｈｅｘｏ服务器</span></div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<h2 id="安装-next-主题"><a href="#安装-next-主题" class="headerlink" title="安装 next 主题"></a>安装 next 主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> &lt;博客位置&gt;</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>注意将 next中的.git 目录删掉，因为之后要用自己的git仓库托管。</p>
+<h2 id="hexo-博客设置"><a href="#hexo-博客设置" class="headerlink" title="hexo 博客设置"></a>hexo 博客设置</h2><p>hexo 博客配置文件位于 <em>&lt;博客位置&gt;/_config.yml</em>  </p>
+<p>修改以下项目，根据自己需要修改：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> <span class="string">&lt;博客标题&gt;</span></div><div class="line"><span class="attr">subtitle:</span> <span class="string">&lt;博客子标题&gt;</span></div><div class="line"><span class="attr">description:</span> <span class="string">&lt;博客描述&gt;</span></div><div class="line"><span class="attr">author:</span> <span class="string">&lt;你的名字&gt;</span></div><div class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="attr">url:</span> <span class="string">&lt;个人博客url&gt;</span></div></pre></td></tr></table></figure></p>
+<p>启用next主题<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">theme:</span> <span class="string">next</span></div></pre></td></tr></table></figure></p>
+<p>配置git-pages位置<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: 设置部署位置，此处使用git-pages服务</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:dandan32/dandan32.github.io.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure></p>
+<p>配置本地搜索<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 搜索设置</span></div><div class="line"><span class="attr">search:</span></div><div class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></div><div class="line"><span class="attr">  field:</span> <span class="string">post</span></div><div class="line"><span class="attr">  format:</span> <span class="string">html</span></div><div class="line"><span class="attr">  limit:</span> <span class="number">10000</span></div></pre></td></tr></table></figure></p>
+<h2 id="主题博客配置"><a href="#主题博客配置" class="headerlink" title="主题博客配置"></a>主题博客配置</h2><p><a href="http://theme-next.iissnan.com/third-party-services.html#search-system" target="_blank" rel="external">参考官方教程</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;不可避俗的来一句：hello world!   &lt;/p&gt;
-&lt;p&gt;很想做个人博客，静态博客工具提供了一种很廉价的创建博客方式！&lt;br&gt;在&lt;strong&gt;pelican、hugo、hexo&lt;/strong&gt;三者中，我最终选择了hexo 与其中的 next 主题。真的很感谢hex
+      &lt;h1 id=&quot;不可避俗的来一句：hello-world&quot;&gt;&lt;a href=&quot;#不可避俗的来一句：hello-world&quot; class=&quot;headerlink&quot; title=&quot;不可避俗的来一句：hello world!&quot;&gt;&lt;/a&gt;不可避俗的来一句：hello world!&lt;/h1
     
     </summary>
     
