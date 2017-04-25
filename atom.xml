@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dandan32.github.io/"/>
-  <updated>2017-04-19T12:15:04.000Z</updated>
+  <updated>2017-04-25T10:19:09.000Z</updated>
   <id>http://dandan32.github.io/</id>
   
   <author>
@@ -14,6 +14,101 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习 绪论</title>
+    <link href="http://dandan32.github.io/2017/04/20/MachineLearning_1/"/>
+    <id>http://dandan32.github.io/2017/04/20/MachineLearning_1/</id>
+    <published>2017-04-20T15:09:16.000Z</published>
+    <updated>2017-04-25T10:19:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>《机器学习-周志华》笔记 第一章</strong></p>
+<h1 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h1><p>人类能够从日常生活中观察事物的规律，总结而成经验，继而以经验辅助判断指导实践活动。获得经验的过程就是学习的过程。<br>那么计算机能够产生对事物更深层次的理解吗？<br>机器学习主要研究的内容是从 <em>数据</em> 中产生 <em>模型</em> 的算法，即学习算法（learning algorithm）。学习算法能够根据提供的经验数据产生模型，在面对新情况时以模型作为依据提供相应判断或产出。</p>
+<p>【Machine Learning,Tom Mitchell 1997】给出了更形式化的定义：假设用P来评估计算机程序在任务类T上的性能，若一个程序通过利用经验E在T中任务上获得性能改善，则我们就说关于T和P，该程序对E进行了学习</p>
+<h1 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h1><ul>
+<li>模型：<br>  “模型” 泛指从数据中学习得到的结果。</li>
+<li>数据集：<br>  一批数据的集合，数据集由样本构成。</li>
+<li>示例(instance)、样本(sample)：<br>  数据集合中的每一条记录称为示例(样本)，示例构成数据集。样本属性的个数d称为样本的” <strong>维度</strong> “(dimensionality), 具备了 <strong>标记(label)</strong> 的样本称为 <strong>样例(example)</strong> 。</li>
+<li>属性(特征) [属性空间] [样本空间] [输入空间]：<br>  反映事物或对象在某方面的表现或性质的事项，属性张成的空间称为” <em>属性空间</em> “、” <em>样本空间</em> “、” <em>输入空间</em> “。</li>
+<li>学习(learning)、训练(training) [训练集]：<br>  从数据中学的模型的过程称为” <em>学习</em> “、” <em>训练</em> “。训练过程使用的数据称为” <em>训练数据</em> “，其中每个样本称为” <em>训练样本</em> “，训练样本组成的集合称为” <em>训练集</em> “。</li>
+<li>测试(testing) [测试集]：<br>  学习模型后，对模型进行评估从而用一组新数据进行预测的过程称为” <em>测试</em> “，而这组新的数据称为 “ <em>测试集</em> “，被预测的样本称为 “ <em>测试样本</em> “</li>
+<li>假设(hypothesis):<br>  学习得到的模型对应了关于数据的某种潜在的规律，因此也称 “假设”。模型有时也称 “学习器”。</li>
+<li>分类、 回归：<br>  若预测的目标是离散的，则学习任务称为”分类”；若目标是连续值，则学习任务称为”回归”。只涉及两个类别的称为”二分类”，通常称一类为” <em>正类</em> “、另一类为” <em>反类</em> “；涉及多个类别的分类称为 “ <em>多分类</em> “</li>
+<li>聚类：<br>  将数据集上的样本分类若干组，每组称为” <em>簇</em> “。聚类过程中使用的数据样本通常不含有标记信息。</li>
+<li>监督学习、无监督学习、半监督学习</li>
+<li>泛化：<br>  指学习得到的模型适用于新样本的能力。</li>
+</ul>
+<h1 id="假设空间"><a href="#假设空间" class="headerlink" title="假设空间"></a>假设空间</h1><p>归纳与演绎，是科学推理的两大基本手段。归纳指的是特殊到一般的泛化；演绎指的是一般到特殊的泛化。机器学习是从样例中学习，所以也称” <em>归纳学习</em> “。机械的记住” <em>训练样本</em> “的学习方式称为” <em>机械学习</em> “,只是简单的记住训练样本对于未遇见过的样本来预测效果会很差。<br>考虑这样一个例子：选西瓜，可以根据根蒂、敲声、色泽综合判断西瓜是否是好瓜的情况。<br>用布尔表达式为： $$ 好瓜\leftrightarrow(色泽=?)\vee(根蒂=?)\vee(敲声=?) $$ 更一般的情况应考虑析合范式: $$(A \vee B) \wedge (C \vee D)$$</p>
+<p>我们把学习过程看作是在所有假设组成的空间中进行搜索的过程，搜索目标是寻找与“训练集”匹配的假设。在西瓜例子中可以知道，色泽可以取“青绿”、“乌黑“ 2种取值，或色泽对好瓜根本没有影响（即其实是3种取值）；根蒂可以取“蜷缩”、“稍蜷”、“硬挺” 3种取值，也可能根蒂对好瓜没有影响（即其实是4种取值）；敲声可取“浊响”、“清脆” 2种取值，也可能敲声对好瓜也无影响（也即其实是3种取值）；也可能根本不存在好瓜这一食物。所<br>如果假设色泽、根蒂、敲声的各有3、2、2种取值，计算时每个取值需要附加上 无影响选择<br>以可以知道面试的假设空间大小为: $$ 4 \times 3 \times 3 + 1 = 37$$</p>
+<p><img src="/images/MachineLearning/chapter1_1.jpeg" alt=""></p>
+<p>基于训练集进行训练得到与训练集一致的假设（能够在训练集上作出正确判断、预测），就是学习的结果。<br>在现实问题中可能面临一个很大的假设空间，但是学习过程是基于样本集进行的，因此很可能出现多个假设与训练集一只，即存在一个与训练集一致的“假设集合”，称之为“ <em>版本空间</em> ”。</p>
+<p>训练集合：</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>色泽</th>
+<th>根蒂</th>
+<th>敲声</th>
+<th>好瓜</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>青绿</td>
+<td>蜷缩</td>
+<td>浊响</td>
+<td>是</td>
+</tr>
+<tr>
+<td>2</td>
+<td>乌黑</td>
+<td>蜷缩</td>
+<td>浊响</td>
+<td>是</td>
+</tr>
+<tr>
+<td>3</td>
+<td>青绿</td>
+<td>硬挺</td>
+<td>清脆</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>乌黑</td>
+<td>稍蜷</td>
+<td>沉闷</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/MachineLearning/chapter1_2.jpeg" alt=""></p>
+<p>西瓜问题的版本空间，现在具有3个假设与训练集一致；对于训练集而言，无法判定哪一个假设更加好。然而对于具体的学习算法而言，必须给出一个模型。这时算法本身的“ <em>偏好</em> ”就会其到关键作用。如果算法喜欢尽可能“特殊”的模型，则它会选择 $$ 好瓜\leftrightarrow(色泽=\star)\vee(根蒂=蜷缩)\vee(敲声=浊响) $$ 但如果算法喜欢更加一般的模型，并且由于某种原因它更加愿意“相信”根蒂，则它会选择：$$ 好瓜\leftrightarrow(色泽=\star)\vee(根蒂=蜷缩)\vee(敲声=\star) $$</p>
+<p>机器学习算法在学习过程中对某种类型假设的偏好，称为“<em>归纳偏好</em>”，或简称 “ <em>偏好</em> ”， 任何一个有效的机器学习算法必有其归纳偏好，否则它将被假设空间中看似在训练集上“等效”的算法所迷惑，而无法产生确定的学习结果。可以想像，对于一个新瓜，我们的学习算法随机挑选版本空间中的一个假设时而告诉它是好瓜，时而告诉它是坏瓜，这样的学习显然没有任何意义。关于“ <em>归纳偏好</em> ”使用回归学习图更加直观，对于下图的点集，要学的一个与训练集一致的模型，相当于找到一条穿过所有样本点的曲线。显然，对有限个样本点组成的训练集，存在很多条与其一致。我们的学习算法必须有某种偏好，才能产出他认为“正确”的模型。<br>归纳偏好可以看作是在假设空间中对假设进行选择的启发式，或“价值观”。 “ <em>奥卡姆剃刀原则</em> ”是常用的一种方法，奥卡姆剃刀原则表示“ 若有多个假设与观察一致，则选择最简单的那个 ”。</p>
+<p><img src="/images/MachineLearning/chapter1_3.jpeg" alt=""></p>
+<p>很多时候，算法A在某些问题上表现比算法B更加好，而算法B在某些问题上表现比算法A更好。证明过程 P8</p>
+<h1 id="机器学习发展历程"><a href="#机器学习发展历程" class="headerlink" title="机器学习发展历程"></a>机器学习发展历程</h1><h2 id="符号主义，逻辑推理"><a href="#符号主义，逻辑推理" class="headerlink" title="符号主义，逻辑推理"></a>符号主义，逻辑推理</h2><p>1963 年 “逻辑理论家”程序 证明了罗素和怀特海的 《数学原理》 中的52条定理</p>
+<h2 id="知识工程"><a href="#知识工程" class="headerlink" title="知识工程"></a>知识工程</h2><p>20世纪 70年代中期，人工智能进入“知识期”，专家系统。</p>
+<h2 id="连接主义"><a href="#连接主义" class="headerlink" title="连接主义"></a>连接主义</h2><p>20世纪 50年代 罗森布莱特 的 感知机。 神经网络、深度学习等。</p>
+<h2 id="统计学习"><a href="#统计学习" class="headerlink" title="统计学习"></a>统计学习</h2><p>20世界90年代中期，统计学习占据主导地位。</p>
+<h2 id="行为主义"><a href="#行为主义" class="headerlink" title="行为主义"></a>行为主义</h2><p>来源于控制论，又称进化主义，其原理为控制论及感知-动作型控制系统。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;《机器学习-周志华》笔记 第一章&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;什么是机器学习？&quot;&gt;&lt;a href=&quot;#什么是机器学习？&quot; class=&quot;headerlink&quot; title=&quot;什么是机器学习？&quot;&gt;&lt;/a&gt;什么是机器学习？&lt;/h1&gt;&lt;p&gt;人类能够从
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://dandan32.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="http://dandan32.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>PyQt5_11 俄罗斯方块</title>
@@ -313,27 +408,83 @@
   </entry>
   
   <entry>
-    <title>操作系统面试</title>
-    <link href="http://dandan32.github.io/2017/04/10/interview_operatingsystem/"/>
-    <id>http://dandan32.github.io/2017/04/10/interview_operatingsystem/</id>
+    <title>面试知识点</title>
+    <link href="http://dandan32.github.io/2017/04/10/interview_basics/"/>
+    <id>http://dandan32.github.io/2017/04/10/interview_basics/</id>
     <published>2017-04-10T04:41:31.000Z</published>
-    <updated>2017-04-10T05:06:47.000Z</updated>
+    <updated>2017-04-21T11:40:53.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="进程、线程、协程、管程"><a href="#进程、线程、协程、管程" class="headerlink" title="进程、线程、协程、管程"></a>进程、线程、协程、管程</h1><h1 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h1><ol>
+    <content type="html"><![CDATA[<h1 id="操作系统部分"><a href="#操作系统部分" class="headerlink" title="操作系统部分"></a>操作系统部分</h1><h2 id="进程、线程、协程、管程-概念和区别"><a href="#进程、线程、协程、管程-概念和区别" class="headerlink" title="进程、线程、协程、管程  概念和区别"></a>进程、线程、协程、管程  概念和区别</h2><p>线程共享堆，同一内存空间</p>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><ol>
 <li>文件、锁</li>
 <li>管道（半双工、父子进程间使用）</li>
 <li>命名管道fifo（半双工、可以在无亲缘关系进程间通信）</li>
 <li>信号量  </li>
 <li>信号  </li>
 <li>消息队列  </li>
-<li>共享内存  </li>
+<li>共享内存  （只有映射为0时，内核才删除共享内存）</li>
 <li>套接字  </li>
+</ol>
+<h2 id="进程同步和互斥"><a href="#进程同步和互斥" class="headerlink" title="进程同步和互斥"></a>进程同步和互斥</h2><p>###　临界区　和　mutex</p>
+<p>临界区只能在同一进程的线程中使用达到互斥，<br>mutex可以在进程间使用达到互斥</p>
+<h3 id="锁、信号量、开关中断-硬件级-、管程-死锁概念"><a href="#锁、信号量、开关中断-硬件级-、管程-死锁概念" class="headerlink" title="锁、信号量、开关中断(硬件级)、管程  死锁概念"></a>锁、信号量、开关中断(硬件级)、管程  死锁概念</h3><h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2><ol>
+<li>分类：<br>软终端、硬中断  </li>
+<li>中断处理机制<br> 请求中断→响应中断→关闭中断→保留断点→中断源识别→保护现场→中断服务子程序→恢复现场→中断返回。</li>
+</ol>
+<h2 id="父子进程共享、fork"><a href="#父子进程共享、fork" class="headerlink" title="父子进程共享、fork"></a>父子进程共享、fork</h2><ol>
+<li>写时复制</li>
+<li>共享代码段</li>
+<li>数据空间、堆栈不同</li>
+<li>文件指针</li>
+<li>实际用户ID、实际组ID、有效用户ID、有效组ID</li>
+<li>添加组ID、进程组ID、会话ID、控制终端</li>
+<li>当前工作目录、根目录、文件屏蔽字、信号屏蔽和排列、环境变量、共享存储段。</li>
+</ol>
+<p>##　页式管理、段式管理、段页式管理。</p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><ol>
+<li>1-范式<br> 属性值不可再分裂成更小的部分</li>
+<li>2-范式<br> 1-范式的基础上，每个属性都依赖于关系模式R中的某个候选键</li>
+<li><p>3-范式<br> 消除了传递依赖的2-范式  </p>
+</li>
+<li><p>BCNF范式<br> 在1-范式的基础上，消除了传递依赖，即每个属性不传递依赖于R的候选键</p>
+</li>
+</ol>
+<h2 id="函数依赖"><a href="#函数依赖" class="headerlink" title="函数依赖"></a>函数依赖</h2><ol>
+<li>平凡依赖<br> X→Y， Y包含X</li>
+<li><p>非平凡依赖<br> X→Y， Y不包含X</p>
+</li>
+<li><p>多值依赖<br> 设R(U)是属性集U上的一个关系模式。X，Y，Z是的U的子集,并且Z=U-X-Y。关系模式R(U)中多值依赖X→→Y成立，当且仅当对R(U)的任一关系r,给定的一对(x，z)值有一组Y的值，这组值仅仅决定于x值而与z值无关。</p>
+<ul>
+<li>平凡多值依赖 ，当z为空</li>
+<li>非平凡多值依赖</li>
+</ul>
+</li>
+</ol>
+<h2 id="游标（回滚操作）"><a href="#游标（回滚操作）" class="headerlink" title="游标（回滚操作）"></a>游标（回滚操作）</h2><h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器　"></a>触发器　</h2><ol>
+<li>事前触发器、事后触发器</li>
+<li>语句级出发、行级触发</li>
+</ol>
+<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="TCP、UDP"><a href="#TCP、UDP" class="headerlink" title="TCP、UDP"></a>TCP、UDP</h2><ol>
+<li>区别<br> TCP 有连接、可靠的字节流服务、超时重发、检验数据、流量控制。 UDP 数据报协议、不可靠</li>
+<li>tcp 特点<br> 快重传、慢启动、超时重传</li>
+<li><p>TCP 3次握手</p>
+</li>
+<li><p>TCP 4次挥手</p>
+</li>
+</ol>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
+<li><h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h1></li>
+</ol>
+<h2 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h2><h2 id="白盒测试"><a href="#白盒测试" class="headerlink" title="白盒测试"></a>白盒测试</h2><h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h1 id="小点"><a href="#小点" class="headerlink" title="小点"></a>小点</h1><ol>
+<li>结构体对齐问题，sizeof()</li>
+<li>内联函数</li>
+<li>宏只是简单的替换</li>
 </ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;进程、线程、协程、管程&quot;&gt;&lt;a href=&quot;#进程、线程、协程、管程&quot; class=&quot;headerlink&quot; title=&quot;进程、线程、协程、管程&quot;&gt;&lt;/a&gt;进程、线程、协程、管程&lt;/h1&gt;&lt;h1 id=&quot;进程间通信&quot;&gt;&lt;a href=&quot;#进程间通信&quot; class
+      &lt;h1 id=&quot;操作系统部分&quot;&gt;&lt;a href=&quot;#操作系统部分&quot; class=&quot;headerlink&quot; title=&quot;操作系统部分&quot;&gt;&lt;/a&gt;操作系统部分&lt;/h1&gt;&lt;h2 id=&quot;进程、线程、协程、管程-概念和区别&quot;&gt;&lt;a href=&quot;#进程、线程、协程、管程-概念和区别&quot; c
     
     </summary>
     
@@ -420,7 +571,7 @@
     <link href="http://dandan32.github.io/2017/04/05/interview_wizardquant/"/>
     <id>http://dandan32.github.io/2017/04/05/interview_wizardquant/</id>
     <published>2017-04-05T14:04:42.000Z</published>
-    <updated>2017-04-07T06:00:25.000Z</updated>
+    <updated>2017-04-21T11:40:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>面试过程</p>
 <ol>
@@ -450,6 +601,8 @@
 <li><p>进程间通信有几种？</p>
 </li>
 <li><p>子进程 fork 后进程空间，CopyOnWrite！！！</p>
+</li>
+<li><p>中断分类，时钟中断</p>
 </li>
 </ol>
 <h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><ol>
