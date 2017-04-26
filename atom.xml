@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dandan32.github.io/"/>
-  <updated>2017-04-25T10:19:09.000Z</updated>
+  <updated>2017-04-26T07:47:32.000Z</updated>
   <id>http://dandan32.github.io/</id>
   
   <author>
@@ -14,6 +14,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>今日头条爬虫实习生面试</title>
+    <link href="http://dandan32.github.io/2017/04/26/interview_toutiao/"/>
+    <id>http://dandan32.github.io/2017/04/26/interview_toutiao/</id>
+    <published>2017-04-26T07:09:56.000Z</published>
+    <updated>2017-04-26T07:47:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>面试官先问了我的爬虫项目经验，对于爬虫的各种细节都问到了，还有截取非http的爬虫？应该比较少吧，第一次听说。感觉爬虫方面还是回答的比较好的。</p>
+<p>后来问了我两个算法方面的问题：</p>
+<ol>
+<li>A、B两个有序（升序）数组，寻找去其中第k大的元素。</li>
+</ol>
+<p>我的回答是“使用两个指示器指示数组末尾位置，比较相对应的位置元素大小，大的就往前移动，移动k次后，返回移动对应的元素”，<br>然后面试官问时间复杂度，和空间复杂度，当时没反应过来，时间复杂度就是O(k)呀，空间复杂度，由于只需要额外3个元素存储指示信心，所以空间复杂度是O(3)。</p>
+<ol>
+<li>A、B两人轮流下棋，棋盘是圆的，轮留下，棋盘没有格子，当棋盘满了，不能放棋子的人就输了，如何保证自己必赢。</li>
+</ol>
+<p>答案很巧妙，当时没有想出来，“首先需要在棋盘中心位置下一子，以后，每次都在对手下棋位置关于圆心对称的地方放置棋子”，此法可保证必胜。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;面试官先问了我的爬虫项目经验，对于爬虫的各种细节都问到了，还有截取非http的爬虫？应该比较少吧，第一次听说。感觉爬虫方面还是回答的比较好的。&lt;/p&gt;
+&lt;p&gt;后来问了我两个算法方面的问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A、B两个有序（升序）数组，寻找去其中第k大的元素。&lt;/l
+    
+    </summary>
+    
+      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小米暑期软件研发工程师面试</title>
+    <link href="http://dandan32.github.io/2017/04/26/interview_mi/"/>
+    <id>http://dandan32.github.io/2017/04/26/interview_mi/</id>
+    <published>2017-04-26T07:08:16.000Z</published>
+    <updated>2017-04-26T07:47:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简记一下小米的面试，一开始是个人介绍和项目介绍。目前发现问题是个人的介绍还是很简单，没有很好突出自己的优点，在项目中的一些难点，复杂点也没有向面试官介绍清楚，小米的面试官给人一种很亲切的感觉。后来就开始线上笔试，笔试很特殊，是以共享文档的方式考察个人的算法功底，面试官写一行，我回答一行。</p>
+<p>题目大体是：</p>
+<p>用链表表示一个数：123 表示为 1 -&gt; 2 -&gt; 3，<br>给出两个数，求其和，结果也用链表形式返回。</p>
+<p>比较简单的一道题目，将链表反转，进行相加操作后，返回结果即可，</p>
+<p>值得我留意的是：</p>
+<ul>
+<li><strong>这里链表反转用3个指针就可以使得原链表反转，可以不用构建一个新链表</strong></li>
+<li><strong>set类可以O(1)的复杂度进行查找</strong></li>
+<li><strong>位图</strong></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简记一下小米的面试，一开始是个人介绍和项目介绍。目前发现问题是个人的介绍还是很简单，没有很好突出自己的优点，在项目中的一些难点，复杂点也没有向面试官介绍清楚，小米的面试官给人一种很亲切的感觉。后来就开始线上笔试，笔试很特殊，是以共享文档的方式考察个人的算法功底，面试官写一行
+    
+    </summary>
+    
+      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习 绪论</title>
@@ -912,37 +979,6 @@
     
     
       <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>First Blog</title>
-    <link href="http://dandan32.github.io/2017/03/15/hello/"/>
-    <id>http://dandan32.github.io/2017/03/15/hello/</id>
-    <published>2017-03-15T03:48:00.000Z</published>
-    <updated>2017-04-07T06:00:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="不可避俗的来一句：hello-world"><a href="#不可避俗的来一句：hello-world" class="headerlink" title="不可避俗的来一句：hello world!"></a>不可避俗的来一句：hello world!</h1><p>很想做个人博客，静态博客工具提供了一种很廉价的创建博客方式！<br>在<strong>pelican、hugo、hexo</strong>三者中，我最终选择了hexo 与其中的 next 主题。真的很感谢hexo 与next主题的创建者们！！！！  </p>
-<p>原本有想法自己做一个~<br>但是自从看到这么优秀的框架后，就打消了这个念头！！！<br>界面很优秀、很有趣！  </p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>结合github 提供的 pages 服务构建个人网站。<br>简单记录一下配置过程：</p>
-<h2 id="安装-node-npm"><a href="#安装-node-npm" class="headerlink" title="安装 node\npm"></a>安装 node\npm</h2><p>这个参考网上教程就好，注意设置环境变量</p>
-<h2 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 hexo</span></div><div class="line">npm install hexo-cli -g</div><div class="line"></div><div class="line"><span class="comment"># 初始化博客</span></div><div class="line">hexo init &lt;博客位置&gt;</div><div class="line">cd &lt;博客位置&gt;</div><div class="line"><span class="comment"># 安装相应依赖</span></div><div class="line">npm install</div><div class="line"><span class="comment"># 本地搜索插件</span></div><div class="line">npm install hexo-generator-searchdb --save</div><div class="line"><span class="comment">#　启动ｈｅｘｏ服务器</span></div><div class="line">hexo server</div></pre></td></tr></table></figure>
-<h2 id="安装-next-主题"><a href="#安装-next-主题" class="headerlink" title="安装 next 主题"></a>安装 next 主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> &lt;博客位置&gt;</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<p>注意将 next中的.git 目录删掉，因为之后要用自己的git仓库托管。</p>
-<h2 id="hexo-博客设置"><a href="#hexo-博客设置" class="headerlink" title="hexo 博客设置"></a>hexo 博客设置</h2><p>hexo 博客配置文件位于 <em>&lt;博客位置&gt;/_config.yml</em>  </p>
-<p>修改以下项目，根据自己需要修改：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> <span class="string">&lt;博客标题&gt;</span></div><div class="line"><span class="attr">subtitle:</span> <span class="string">&lt;博客子标题&gt;</span></div><div class="line"><span class="attr">description:</span> <span class="string">&lt;博客描述&gt;</span></div><div class="line"><span class="attr">author:</span> <span class="string">&lt;你的名字&gt;</span></div><div class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="attr">url:</span> <span class="string">&lt;个人博客url&gt;</span></div></pre></td></tr></table></figure></p>
-<p>启用next主题<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">theme:</span> <span class="string">next</span></div></pre></td></tr></table></figure></p>
-<p>配置git-pages位置<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: 设置部署位置，此处使用git-pages服务</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:dandan32/dandan32.github.io.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure></p>
-<p>配置本地搜索<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 搜索设置</span></div><div class="line"><span class="attr">search:</span></div><div class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></div><div class="line"><span class="attr">  field:</span> <span class="string">post</span></div><div class="line"><span class="attr">  format:</span> <span class="string">html</span></div><div class="line"><span class="attr">  limit:</span> <span class="number">10000</span></div></pre></td></tr></table></figure></p>
-<h2 id="主题博客配置"><a href="#主题博客配置" class="headerlink" title="主题博客配置"></a>主题博客配置</h2><p><a href="http://theme-next.iissnan.com/third-party-services.html#search-system" target="_blank" rel="external">参考官方教程</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;不可避俗的来一句：hello-world&quot;&gt;&lt;a href=&quot;#不可避俗的来一句：hello-world&quot; class=&quot;headerlink&quot; title=&quot;不可避俗的来一句：hello world!&quot;&gt;&lt;/a&gt;不可避俗的来一句：hello world!&lt;/h1
-    
-    </summary>
-    
     
   </entry>
   
