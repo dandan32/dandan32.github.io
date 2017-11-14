@@ -1,0 +1,1215 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="机器学习," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="DingTing" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="经验误差 与 过拟合*(模型就是学习器)
+
+错误率:  通常将分类错误的样本数占样本总数的比例称为“错误率”。即如果在m个样本中有a个样本分类错误，则错误率$E=\frac{a}{m}$, 相应的 $1-\frac{a}{m}$ 称为 “ 精度 ”。
+误差：  把学习器在实际预测上输出与样本值的真是输出之间的差异称为“误差”，学习器在训练集上的“ 误差 ”称为“ 训练误差 ” 或 “ 经验误差 ”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习 模型评估与选择">
+<meta property="og:url" content="http://dandan32.github.io/2017/04/27/MachineLearning-2/index.html">
+<meta property="og:site_name" content="DingTing">
+<meta property="og:description" content="经验误差 与 过拟合*(模型就是学习器)
+
+错误率:  通常将分类错误的样本数占样本总数的比例称为“错误率”。即如果在m个样本中有a个样本分类错误，则错误率$E=\frac{a}{m}$, 相应的 $1-\frac{a}{m}$ 称为 “ 精度 ”。
+误差：  把学习器在实际预测上输出与样本值的真是输出之间的差异称为“误差”，学习器在训练集上的“ 误差 ”称为“ 训练误差 ” 或 “ 经验误差 ”">
+<meta property="og:updated_time" content="2017-05-02T13:27:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习 模型评估与选择">
+<meta name="twitter:description" content="经验误差 与 过拟合*(模型就是学习器)
+
+错误率:  通常将分类错误的样本数占样本总数的比例称为“错误率”。即如果在m个样本中有a个样本分类错误，则错误率$E=\frac{a}{m}$, 相应的 $1-\frac{a}{m}$ 称为 “ 精度 ”。
+误差：  把学习器在实际预测上输出与样本值的真是输出之间的差异称为“误差”，学习器在训练集上的“ 误差 ”称为“ 训练误差 ” 或 “ 经验误差 ”">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6397571791019050000',
+      author: 'blog owner'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dandan32.github.io/2017/04/27/MachineLearning-2/"/>
+
+
+
+
+
+  <title> 机器学习 模型评估与选择 | DingTing </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?32741533f825c9ef637d5d3489c2e03a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DingTing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">土豆烧排骨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dandan32.github.io/2017/04/27/MachineLearning-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pipi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DingTing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                机器学习 模型评估与选择
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T13:59:56+08:00">
+                2017 年 04 月 27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/27/MachineLearning-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/27/MachineLearning-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/27/MachineLearning-2/" class="leancloud_visitors" data-flag-title="机器学习 模型评估与选择">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="经验误差-与-过拟合"><a href="#经验误差-与-过拟合" class="headerlink" title="经验误差 与 过拟合"></a>经验误差 与 过拟合</h1><p>*(模型就是学习器)</p>
+<ul>
+<li><strong>错误率</strong>:<br>  通常将分类错误的样本数占样本总数的比例称为“<em>错误率</em>”。即如果在m个样本中有a个样本分类错误，则错误率$E=\frac{a}{m}$, 相应的 $1-\frac{a}{m}$ 称为 “ <em>精度</em> ”。</li>
+<li><strong>误差</strong>：<br>  把学习器在实际预测上输出与样本值的真是输出之间的差异称为“误差”，学习器在训练集上的“ <em>误差</em> ”称为“ <em>训练误差</em> ” 或 “ <em>经验误差</em> ”；在新样本上的误差称为 “ <em>泛化误差</em> ”。显然，我们希望得到“泛化误差”小的学习器。</li>
+<li><strong>过拟合(高方差)</strong>:<br>  当学习器将训练集样本学习得“太好”的时候，很可能将训练集中“自身特殊”的一些特点作为潜在样本具有的一般性质，这会导致“泛化性能”下降。这种现象称为“过拟合”。过拟合通常是因为学习能力过于强大而将不太一般的特性都学习了；过拟合解决比较麻烦，是机器学习的关键障碍。过拟合无法彻底避免，只能够缓解。因为机器学习的问题大都是“NP”难问题，而有效的学习算法必须在多项式时间内给出结果，若彻底避免过拟合，则通过经验误差最小化就能获得最优解，也就意味着产生了 “P=NP”，与现实矛盾。</li>
+<li><strong>欠拟合(高偏差)</strong>:<br>  与过拟合相对的就是“欠拟合”，欠拟合是指对于训练集上的一般性质尚未学习好。欠拟合是因为学习能力不足而造成的，欠拟合相对比较容易解决，比如决策数树中增加分支，神经网络中增加迭代次数。</li>
+</ul>
+<p><strong>模型选择</strong><br>在现实任务中，往往有多种学习算法可供选择，甚至对同个学习算法，使用不同的参数将产生多个模型。那么使用何种算法，使用何种参数？这就是机器学习中“<em>模型选择</em>” 的问题。理想的做法是对模型的“<em>泛化误差</em>”进行评估，选择泛化误差最小的模型。但在现实中无法直接获得“<em>泛化误差</em>”,在现实中如何进行模型的“评估” 与 “选择” ？</p>
+<h1 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h1><p>通常可以通过实验测试来对学习器的泛化误差进行“评估”并进而做出“选择”。</p>
+<p><strong>测试集</strong>：<br>需要一个样本集合来测试学习器对新样本的判别能力。以测试集上的 “<em>测试误差</em>” 作为 “<em>泛化误差</em>” 的近似。通常假设“<em>测试样本</em>” 也是从样本真是分布中独立同分布采样而得。唯一需要注意的是，测试集应该极尽可能的与训练集互斥。即测试样本不应该在训练样本中出现、未在训练中使用过（这其中的道理很好理解，比如考试遇见做过的题目很可能取得高分）。</p>
+<p><strong>当只有m个样本的数据集D，如何训练和测试呢？以下给出几种方法</strong></p>
+<h2 id="留出法"><a href="#留出法" class="headerlink" title="留出法"></a>留出法</h2><p>直接将数据集D 划分为两个互斥的集合S、T，其中一个集合S作为训练集，另一个集合T作为测试集，即 $ D = S \cup T, S \cap T= \emptyset $。</p>
+<p>以二分类作为例子，假定D包含 1000 个样本，将其划分为S包含700个样本， T包含300个样本，用S进行训练后，如果模型在T上的有90个样本分类错误，那么其错误率就是$ \frac{90}{300} \times 100% = 30%$,相应的精度为 $1 - 30% = 70% $。</p>
+<p>* <em>需要注意的是划分数据的过程中数据分布的一致性。</em><br>避免在数据划分过程用引入额外的偏差而对最终结果产生影响，比如在分类中至少要保持相同的类别比例。从采样的角度看待数据集的划分过程，保留类别比例的采样方式通常称为“分层采样”。</p>
+<p>单次使用留出法往往不够稳定可靠，因为划分方式的不同，比如排序后将正例按比例放入S、T中，会使得模型评估结果会有差别。<em>因此一般采取若干次随机划分，重复进行试验后取平均值作为留出法的评估结果。</em></p>
+<p><strong>缺点</strong>:</p>
+<p>由于我们想要评估由D训练得出的模型的性能，但留出法划分的训练集、测试集 会导致一个窘境！即如果训练集S包含大多数样本，则训练处的模型很可能接近于用D训练出的模型，但是由于T比较小，苹果结果可能不够稳定准确。</p>
+<p>常见的做法是将大约$\frac{2}{3} $~ $\frac{4}{5}$ 的样本用于训练，剩余样本用于测试。</p>
+<h2 id="交叉验证法"><a href="#交叉验证法" class="headerlink" title="交叉验证法"></a>交叉验证法</h2><p>预先将数据集 D 划分为 k 个大小相似的互斥子集，即 $ D=D_1 \cup D_2 \cup …  \cup D_k, D_i \cap D_j = \emptyset $。尽可能保证每个子集数据分布的一致性。每次用k-1个数据集作为训练集，余下的作为测试集；这样可以获得k组（训练集|测试集），从而可以进行k次训练和测试，最终返回k次测试结果的均值。我们显然可以发现，交叉验证法评估结果的稳定性和保真性很依赖k的取值，所以交叉验证法也称为“ <strong>k折交叉验证</strong> ”。因为将数据集D划分为k个子集存在多种划分方式，为了减小因样本划分不同带来的差别，常随机使用不同的划分方式重复p次，最后评估p次k折交叉验证结果的均值，例如常见的“ <strong>10次10折交叉验证</strong>”。</p>
+<p>当数据集D有m个样本，当k=m时，则得到交叉验证法的特例：“ <strong>留一法</strong> ”，显然，留一法显然不受划分方式的影响。因为m个样本的集合划分为m个不相交的子集只有唯一的一种划分方式（每个子集包含一个样本）。 这就是的留一法的评估结果与期望使用D训练出的模型很相似，所以留一法往往被认为比较准确。<br>但其存在的缺陷是：训练m个计算模型的开销可能是难以接受的，另外，留一法的评估结果也未必比其他评估方法准确（“没有免费的午餐”定理）。</p>
+<h2 id="自助法"><a href="#自助法" class="headerlink" title="自助法"></a>自助法</h2><p>我们希望评估的是用D训练出的模型。可以发现，“ <em>留出法</em> ”与 “ <em>交叉验证法</em> ”中，由于保留一部分用于测试，因此实际评估使用的训练集比D小，必然会引入一些因训练规模不同而导致的“<em>估计偏差</em>”，“<em>留一法</em>”受样本规模影响较小，但是复杂度太高！有什么办法可以减少样本规模造成的影响，同时还能比较高效的进行实验估计？？？</p>
+<p>“自助法（bootstrapping）”是一种比较好的解决方案（以“<em>直接采样法</em>”作为基础），给定包含m个样本的集合，对其采样生成$D\prime$，每次随机从D中抽取一个样本，放入$D\prime$中，然后再将样本放回D中，这样下一次仍有可能采集到该样本；重复此过程m此后，获的包含m个样本的数据集$D\prime$。在$D‘$中有些样本会重复出现，而有些则根本不出现。可以估算，样本在m次采样中都不被采到的概率是$(1- \frac{1}{m})^m$,去极限得到：$$\lim\limits_{m \mapsto \infty}{(1- \frac{1}{m})^m} \mapsto \frac{1}{e} \approx 0.368$$</p>
+<p>也就是说“<em>自助法</em>”中大概有 36.8% 的样本未出现在数据集 $D\prime$中。 将 $D\prime$ 作为训练集，将 $D\D\prime$作为测试集，这样实际评估的模型与期望评估的模型都是用m个训练样本。仍然有$\frac{1}{3}$的数据样本用于测试，这样的测试结果，也称“<em>包外估计（out of bag estimate）</em>”。</p>
+<p>自助法对于数据集较小，在难以有效划分训练集、测试集时很有用。自助法能够产生多个训练集，这对于集成学习很有好处，然而，自助法产生数据的方式改变了初始数据集的分布，带来估计偏差</p>
+<h2 id="调参与最终模型"><a href="#调参与最终模型" class="headerlink" title="调参与最终模型"></a>调参与最终模型</h2><p>大多数学习算法都有些参数（parameter）需要设置，参数配置不同导致的学习的模型性能往往有差别，因此除了对适用学习算法进行选择，还需对算法参数进行设定（即常说的“<em>参数选择</em>”）。而实际上机器学习通常涉及到两类参数，一类是超参数（算法的参数）；另一类是模型的参数，比如深度网络中每个节点的权值参数。</p>
+<p>给定m个样本的数据集D，在模型评估与选择过程中由于需要留出一部分数据进行测试，实际上只用了一部分数据训练模型，在模型选择完成后，学习算法和参数配置就已经确定好，<strong>此时，应该使用D重新训练模型，使用所用m个样本，这是最终提交给用户的模型！</strong></p>
+<p>* 一般将模型在实际使用中遇到的数据称为 “<em>测试数据</em>”<br>* 为了区分，模型评估与选择中用于评估的数据集称为“<em>验证集（validation set）</em>”</p>
+<h1 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h1><p>衡量模型泛化能力的评价标准，称为性能度量（performance measure），给定样例集$D={(x_1, y_2),(x_2, y_2),…,(x_n, y_n)}$ 其中 $y_i$ 是 样例 $x_i$ 的真实标记，要评估学习器 $f$ 的性能，就要把学习器预测结果 $f(x)$ 与真实标记 $y$ 进行比较。</p>
+<p>* 回归任务最常用的性能度量是 “均方误差” (mean squared error).</p>
+<p>$$E(f;D) = \frac{1}{m} \sum_{i=1}^{m}(f(x_i)-y_i)^2$$</p>
+<p>跟一般的对于数据分布 D 和概率密度函数$p(·)$ 均方误差可表示为：</p>
+<p>$$E(f;D) = \int_{x \sim D} (f(x)-y)^2 p(x)dx$$</p>
+<h2 id="错误率-与-精度"><a href="#错误率-与-精度" class="headerlink" title="错误率 与 精度"></a>错误率 与 精度</h2><p>* $\mathrm{II}(·)$ 指示函数，根据是否为真输出为0或1。</p>
+<p>错误率 与 精度 是分类任务中最常用的两种性能度量，即适用于二分类任务、也适用于多分类任务。错误率是分类错误的样例占样本总数的比例：</p>
+<p>$$E(f;D) = \frac{1}{m}\sum_{i=1}^{m} \mathrm{II} (f(x_i) \neq y_i)$$</p>
+<p>相应的精度则定义为：</p>
+<p>$$<br>\begin{equation}\begin{split}<br>acc(f;D) &amp;= \frac{1}{m}\sum_{i=1}^{m} \mathrm{II} (f(x_i) = y_i)\\<br>&amp;=1-E(f;D)<br>\end{split}\end{equation}<br>$$ </p>
+<p>跟一般的对于数据分布 D 和概率密度函数$p(·)$ 错误率和精度可表示为：<br>$$错误率：E(f;D) = \int_{x \sim D}  \mathrm{II} (f(x) \neq y) p(x) dx$$</p>
+<p>$$<br>\begin{equation}\begin{split}<br>精度：acc(f;D) &amp;= \int_{x \sim D}  \mathrm{II} (f(x) = y) p(x) dx\\<br>&amp;= 1- E(f;D)<br>\end{split}\end{equation}<br>$$</p>
+<h2 id="查准率、-查全率、-与-F1"><a href="#查准率、-查全率、-与-F1" class="headerlink" title="查准率、 查全率、 与 F1"></a>查准率、 查全率、 与 F1</h2><p>错误率衡量了模型对样本的识别能力，比如一车西瓜，通过模型分类后，错误率能告诉我们有多少个瓜判别错误，但是如果实际问题更关心的是“挑出的瓜中有多少是好瓜，或者好瓜中有多少被挑了出来”。那错误率显然不满足情况，这时需要其他性能度量！</p>
+<p>###查准率（precision）</p>
+<p>###查全率（召回率、recall）</p>
+<h3 id="P-R图（P-R曲线）"><a href="#P-R图（P-R曲线）" class="headerlink" title="P-R图（P-R曲线）"></a>P-R图（P-R曲线）</h3><ul>
+<li>完全包裹</li>
+<li>面积</li>
+<li>平衡点（Break-Even Point）</li>
+</ul>
+<h2 id="ROC-与-AUC"><a href="#ROC-与-AUC" class="headerlink" title="ROC 与 AUC"></a>ROC 与 AUC</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>觉得好可以打赏下哦！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay-qcode.jpg" alt="pipi WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-qcode.jpg" alt="pipi Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      pipi
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://dandan32.github.io/2017/04/27/MachineLearning-2/" title="机器学习 模型评估与选择">http://dandan32.github.io/2017/04/27/MachineLearning-2/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/26/interview/interview-toutiao-1/" rel="next" title="今日头条爬虫实习生面试">
+                <i class="fa fa-chevron-left"></i> 今日头条爬虫实习生面试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/04/tensorflow-1/" rel="prev" title="Tensorflow - 1 简介、原理">
+                Tensorflow - 1 简介、原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/27/MachineLearning-2/"
+           data-title="机器学习 模型评估与选择" data-url="http://dandan32.github.io/2017/04/27/MachineLearning-2/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="pipi" />
+          <p class="site-author-name" itemprop="name">pipi</p>
+           
+              <p class="site-description motion-element" itemprop="description">cs，math，logging myself</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/dandan32" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#经验误差-与-过拟合"><span class="nav-number">1.</span> <span class="nav-text">经验误差 与 过拟合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评估方法"><span class="nav-number">2.</span> <span class="nav-text">评估方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#留出法"><span class="nav-number">2.1.</span> <span class="nav-text">留出法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交叉验证法"><span class="nav-number">2.2.</span> <span class="nav-text">交叉验证法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自助法"><span class="nav-number">2.3.</span> <span class="nav-text">自助法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调参与最终模型"><span class="nav-number">2.4.</span> <span class="nav-text">调参与最终模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能度量"><span class="nav-number">3.</span> <span class="nav-text">性能度量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#错误率-与-精度"><span class="nav-number">3.1.</span> <span class="nav-text">错误率 与 精度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查准率、-查全率、-与-F1"><span class="nav-number">3.2.</span> <span class="nav-text">查准率、 查全率、 与 F1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#P-R图（P-R曲线）"><span class="nav-number">3.2.1.</span> <span class="nav-text">P-R图（P-R曲线）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROC-与-AUC"><span class="nav-number">3.3.</span> <span class="nav-text">ROC 与 AUC</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">pipi</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i>本文总阅读量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"pipidingdingting"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("8o1sGN7R0tENk48mVgiKS4WD-gzGzoHsz", "tbgDdAccVSoy6kBRcvjek8km");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
