@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>DingTing</title>
+  <title>DanMin</title>
   <subtitle>土豆烧排骨</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://dandan32.github.io/"/>
+  <link href="http://blog.pisiyuan.top/"/>
   <updated>2017-08-29T07:32:40.000Z</updated>
-  <id>http://dandan32.github.io/</id>
+  <id>http://blog.pisiyuan.top/</id>
   
   <author>
     <name>pipi</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>HanoiTower</title>
-    <link href="http://dandan32.github.io/2017/08/29/algorithm/HanoiTower/"/>
-    <id>http://dandan32.github.io/2017/08/29/algorithm/HanoiTower/</id>
+    <link href="http://blog.pisiyuan.top/2017/08/29/algorithm/HanoiTower/"/>
+    <id>http://blog.pisiyuan.top/2017/08/29/algorithm/HanoiTower/</id>
     <published>2017-08-29T02:23:41.000Z</published>
     <updated>2017-08-29T07:32:40.000Z</updated>
     
@@ -39,17 +39,17 @@
     
     </summary>
     
-      <category term="算法" scheme="http://dandan32.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://blog.pisiyuan.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="递归" scheme="http://dandan32.github.io/tags/%E9%80%92%E5%BD%92/"/>
+      <category term="递归" scheme="http://blog.pisiyuan.top/tags/%E9%80%92%E5%BD%92/"/>
     
   </entry>
   
   <entry>
     <title>美团提前批面试</title>
-    <link href="http://dandan32.github.io/2017/08/29/interview/interview-meituan-1/"/>
-    <id>http://dandan32.github.io/2017/08/29/interview/interview-meituan-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/08/29/interview/interview-meituan-1/"/>
+    <id>http://blog.pisiyuan.top/2017/08/29/interview/interview-meituan-1/</id>
     <published>2017-08-29T02:13:46.000Z</published>
     <updated>2017-11-16T16:18:04.472Z</updated>
     
@@ -63,17 +63,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>微品会提前批面试</title>
-    <link href="http://dandan32.github.io/2017/08/29/interview/interview-vip-1/"/>
-    <id>http://dandan32.github.io/2017/08/29/interview/interview-vip-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/08/29/interview/interview-vip-1/"/>
+    <id>http://blog.pisiyuan.top/2017/08/29/interview/interview-vip-1/</id>
     <published>2017-08-29T02:13:41.000Z</published>
     <updated>2017-11-16T16:22:07.200Z</updated>
     
@@ -91,17 +91,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>阿里巴巴内推面试</title>
-    <link href="http://dandan32.github.io/2017/08/29/interview/interview-ali-2/"/>
-    <id>http://dandan32.github.io/2017/08/29/interview/interview-ali-2/</id>
+    <link href="http://blog.pisiyuan.top/2017/08/29/interview/interview-ali-2/"/>
+    <id>http://blog.pisiyuan.top/2017/08/29/interview/interview-ali-2/</id>
     <published>2017-08-29T02:13:34.000Z</published>
     <updated>2017-11-16T16:14:49.786Z</updated>
     
@@ -128,17 +128,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>hadoop</title>
-    <link href="http://dandan32.github.io/2017/08/05/hadoop/"/>
-    <id>http://dandan32.github.io/2017/08/05/hadoop/</id>
+    <link href="http://blog.pisiyuan.top/2017/08/05/hadoop/"/>
+    <id>http://blog.pisiyuan.top/2017/08/05/hadoop/</id>
     <published>2017-08-05T07:37:40.000Z</published>
     <updated>2017-08-05T18:43:23.000Z</updated>
     
@@ -146,21 +146,21 @@
     
     </summary>
     
-      <category term="大数据" scheme="http://dandan32.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="http://blog.pisiyuan.top/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="hadoop" scheme="http://dandan32.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop/"/>
+      <category term="hadoop" scheme="http://blog.pisiyuan.top/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop/"/>
     
     
-      <category term="大数据" scheme="http://dandan32.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="http://blog.pisiyuan.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="hadoop" scheme="http://dandan32.github.io/tags/hadoop/"/>
+      <category term="hadoop" scheme="http://blog.pisiyuan.top/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>阿里巴巴面试</title>
-    <link href="http://dandan32.github.io/2017/07/01/interview/interview-ali-1/"/>
-    <id>http://dandan32.github.io/2017/07/01/interview/interview-ali-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/07/01/interview/interview-ali-1/"/>
+    <id>http://blog.pisiyuan.top/2017/07/01/interview/interview-ali-1/</id>
     <published>2017-07-01T13:27:52.000Z</published>
     <updated>2017-11-15T14:49:18.823Z</updated>
     
@@ -174,17 +174,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>南方基金面试</title>
-    <link href="http://dandan32.github.io/2017/06/20/interview/interview-southern-1/"/>
-    <id>http://dandan32.github.io/2017/06/20/interview/interview-southern-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/06/20/interview/interview-southern-1/"/>
+    <id>http://blog.pisiyuan.top/2017/06/20/interview/interview-southern-1/</id>
     <published>2017-06-20T13:52:57.000Z</published>
     <updated>2017-08-29T02:12:15.000Z</updated>
     
@@ -197,17 +197,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Tensorflow - 2</title>
-    <link href="http://dandan32.github.io/2017/06/12/tensorflow-2/"/>
-    <id>http://dandan32.github.io/2017/06/12/tensorflow-2/</id>
+    <link href="http://blog.pisiyuan.top/2017/06/12/tensorflow-2/"/>
+    <id>http://blog.pisiyuan.top/2017/06/12/tensorflow-2/</id>
     <published>2017-06-12T08:45:25.000Z</published>
     <updated>2017-06-12T08:46:00.000Z</updated>
     
@@ -215,19 +215,19 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://dandan32.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://dandan32.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="tensorflow" scheme="http://dandan32.github.io/tags/tensorflow/"/>
+      <category term="tensorflow" scheme="http://blog.pisiyuan.top/tags/tensorflow/"/>
     
   </entry>
   
   <entry>
     <title>微众银行面试</title>
-    <link href="http://dandan32.github.io/2017/06/10/interview/interview-webank-1/"/>
-    <id>http://dandan32.github.io/2017/06/10/interview/interview-webank-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/06/10/interview/interview-webank-1/"/>
+    <id>http://blog.pisiyuan.top/2017/06/10/interview/interview-webank-1/</id>
     <published>2017-06-10T13:27:47.000Z</published>
     <updated>2017-08-29T02:12:22.000Z</updated>
     
@@ -240,17 +240,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Tensorflow - 1 简介、原理</title>
-    <link href="http://dandan32.github.io/2017/06/04/tensorflow-1/"/>
-    <id>http://dandan32.github.io/2017/06/04/tensorflow-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/06/04/tensorflow-1/"/>
+    <id>http://blog.pisiyuan.top/2017/06/04/tensorflow-1/</id>
     <published>2017-06-04T06:19:10.000Z</published>
     <updated>2017-06-12T08:48:57.000Z</updated>
     
@@ -318,19 +318,19 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://dandan32.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://dandan32.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="tensorflow" scheme="http://dandan32.github.io/tags/tensorflow/"/>
+      <category term="tensorflow" scheme="http://blog.pisiyuan.top/tags/tensorflow/"/>
     
   </entry>
   
   <entry>
     <title>机器学习 模型评估与选择</title>
-    <link href="http://dandan32.github.io/2017/04/27/MachineLearning-2/"/>
-    <id>http://dandan32.github.io/2017/04/27/MachineLearning-2/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/27/MachineLearning-2/"/>
+    <id>http://blog.pisiyuan.top/2017/04/27/MachineLearning-2/</id>
     <published>2017-04-27T05:59:56.000Z</published>
     <updated>2017-05-02T13:27:54.000Z</updated>
     
@@ -391,17 +391,17 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://dandan32.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://dandan32.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>今日头条爬虫实习生面试</title>
-    <link href="http://dandan32.github.io/2017/04/26/interview/interview-toutiao-1/"/>
-    <id>http://dandan32.github.io/2017/04/26/interview/interview-toutiao-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/26/interview/interview-toutiao-1/"/>
+    <id>http://blog.pisiyuan.top/2017/04/26/interview/interview-toutiao-1/</id>
     <published>2017-04-26T07:09:56.000Z</published>
     <updated>2017-08-29T02:12:21.000Z</updated>
     
@@ -426,17 +426,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>小米暑期软件研发工程师面试</title>
-    <link href="http://dandan32.github.io/2017/04/26/interview/interview-mi-1/"/>
-    <id>http://dandan32.github.io/2017/04/26/interview/interview-mi-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/26/interview/interview-mi-1/"/>
+    <id>http://blog.pisiyuan.top/2017/04/26/interview/interview-mi-1/</id>
     <published>2017-04-26T07:08:16.000Z</published>
     <updated>2017-08-29T02:12:13.000Z</updated>
     
@@ -458,17 +458,17 @@
     
     </summary>
     
-      <category term="面试" scheme="http://dandan32.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="面试" scheme="http://dandan32.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.pisiyuan.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>机器学习 绪论</title>
-    <link href="http://dandan32.github.io/2017/04/20/MachineLearning-1/"/>
-    <id>http://dandan32.github.io/2017/04/20/MachineLearning-1/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/20/MachineLearning-1/"/>
+    <id>http://blog.pisiyuan.top/2017/04/20/MachineLearning-1/</id>
     <published>2017-04-20T15:09:16.000Z</published>
     <updated>2017-04-25T10:19:09.000Z</updated>
     
@@ -553,17 +553,17 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://dandan32.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://dandan32.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://blog.pisiyuan.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5_11 俄罗斯方块</title>
-    <link href="http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-11/"/>
-    <id>http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-11/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-11/"/>
+    <id>http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-11/</id>
     <published>2017-04-19T07:55:06.000Z</published>
     <updated>2017-04-19T12:15:04.000Z</updated>
     
@@ -595,17 +595,17 @@
     
     </summary>
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/categories/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/categories/PyQt5/"/>
     
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/tags/PyQt5/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5_10 自定义部件【Custom widgets in PyQt5】</title>
-    <link href="http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-10/"/>
-    <id>http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-10/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-10/"/>
+    <id>http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-10/</id>
     <published>2017-04-19T07:55:04.000Z</published>
     <updated>2017-04-19T08:34:14.000Z</updated>
     
@@ -621,17 +621,17 @@
     
     </summary>
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/categories/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/categories/PyQt5/"/>
     
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/tags/PyQt5/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5-9  绘图 【Painting in PyQt5】</title>
-    <link href="http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-9/"/>
-    <id>http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-9/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-9/"/>
+    <id>http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-9/</id>
     <published>2017-04-19T07:50:58.000Z</published>
     <updated>2017-04-19T08:35:06.000Z</updated>
     
@@ -657,17 +657,17 @@
     
     </summary>
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/categories/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/categories/PyQt5/"/>
     
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/tags/PyQt5/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5-8 小部件II 【widgets II】</title>
-    <link href="http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-8/"/>
-    <id>http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-8/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-8/"/>
+    <id>http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-8/</id>
     <published>2017-04-19T07:44:41.000Z</published>
     <updated>2017-04-19T08:15:41.000Z</updated>
     
@@ -690,17 +690,17 @@
     
     </summary>
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/categories/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/categories/PyQt5/"/>
     
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/tags/PyQt5/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5-7 小部件 【widgets】</title>
-    <link href="http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-7/"/>
-    <id>http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-7/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-7/"/>
+    <id>http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-7/</id>
     <published>2017-04-19T07:32:16.000Z</published>
     <updated>2017-04-19T07:50:40.000Z</updated>
     
@@ -723,17 +723,17 @@
     
     </summary>
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/categories/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/categories/PyQt5/"/>
     
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/tags/PyQt5/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5-6 对话框 【Dialogs in PyQt5】</title>
-    <link href="http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-6/"/>
-    <id>http://dandan32.github.io/2017/04/19/PyQt5/PyQt5-6/</id>
+    <link href="http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-6/"/>
+    <id>http://blog.pisiyuan.top/2017/04/19/PyQt5/PyQt5-6/</id>
     <published>2017-04-19T07:11:52.000Z</published>
     <updated>2017-04-19T07:30:51.000Z</updated>
     
@@ -756,10 +756,10 @@
     
     </summary>
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/categories/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/categories/PyQt5/"/>
     
     
-      <category term="PyQt5" scheme="http://dandan32.github.io/tags/PyQt5/"/>
+      <category term="PyQt5" scheme="http://blog.pisiyuan.top/tags/PyQt5/"/>
     
   </entry>
   
