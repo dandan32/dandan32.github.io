@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java基础," />
+  <meta name="keywords" content="操作系统," />
 
 
 
@@ -89,30 +89,52 @@
 
 
 
-<meta name="description" content="参考资料：
+<meta name="description" content="操作系统部分进程、线程、协程、管程  概念和区别线程共享堆，同一内存空间
+进程间通信
+文件、锁
+管道（半双工、父子进程间使用）
+命名管道fifo（半双工、可以在无亲缘关系进程间通信）
+信号量  
+信号  
+消息队列  
+共享内存  （只有映射为0时，内核才删除共享内存）
+套接字  
 
-《The Java® Virtual Machine Specification(Java SE 8 Edition)》《Java 虚拟机规范(Java SE 7)》中文版本Java 虚拟机规范 
-
-《The Java® Virtual Machine Specification(Java SE 8 Edition)》《The Java Language Specification,">
+进程同步和互斥###　临界区　和　mutex
+临界区只能在同一进程的线程中使用达到互斥，mutex可以在进程间使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础知识点目录">
-<meta property="og:url" content="http://blog.pisiyuan.top/2017/04/06/java-index/index.html">
+<meta property="og:title" content="操作系统知识点">
+<meta property="og:url" content="http://blog.pisiyuan.top/2017/04/10/interview/os-basics-for-interview/index.html">
 <meta property="og:site_name" content="Dan">
-<meta property="og:description" content="参考资料：
+<meta property="og:description" content="操作系统部分进程、线程、协程、管程  概念和区别线程共享堆，同一内存空间
+进程间通信
+文件、锁
+管道（半双工、父子进程间使用）
+命名管道fifo（半双工、可以在无亲缘关系进程间通信）
+信号量  
+信号  
+消息队列  
+共享内存  （只有映射为0时，内核才删除共享内存）
+套接字  
 
-《The Java® Virtual Machine Specification(Java SE 8 Edition)》《Java 虚拟机规范(Java SE 7)》中文版本Java 虚拟机规范 
-
-《The Java® Virtual Machine Specification(Java SE 8 Edition)》《The Java Language Specification,">
-<meta property="og:image" content="http://blog.pisiyuan.top/images/JavaBasic/1.png">
-<meta property="og:updated_time" content="2017-04-07T08:57:28.000Z">
+进程同步和互斥###　临界区　和　mutex
+临界区只能在同一进程的线程中使用达到互斥，mutex可以在进程间使用">
+<meta property="og:updated_time" content="2017-11-28T03:15:16.402Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java基础知识点目录">
-<meta name="twitter:description" content="参考资料：
+<meta name="twitter:title" content="操作系统知识点">
+<meta name="twitter:description" content="操作系统部分进程、线程、协程、管程  概念和区别线程共享堆，同一内存空间
+进程间通信
+文件、锁
+管道（半双工、父子进程间使用）
+命名管道fifo（半双工、可以在无亲缘关系进程间通信）
+信号量  
+信号  
+消息队列  
+共享内存  （只有映射为0时，内核才删除共享内存）
+套接字  
 
-《The Java® Virtual Machine Specification(Java SE 8 Edition)》《Java 虚拟机规范(Java SE 7)》中文版本Java 虚拟机规范 
-
-《The Java® Virtual Machine Specification(Java SE 8 Edition)》《The Java Language Specification,">
-<meta name="twitter:image" content="http://blog.pisiyuan.top/images/JavaBasic/1.png">
+进程同步和互斥###　临界区　和　mutex
+临界区只能在同一进程的线程中使用达到互斥，mutex可以在进程间使用">
 
 
 
@@ -140,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.pisiyuan.top/2017/04/06/java-index/"/>
+  <link rel="canonical" href="http://blog.pisiyuan.top/2017/04/10/interview/os-basics-for-interview/"/>
 
 
 
 
 
-  <title> Java基础知识点目录 | Dan </title>
+  <title> 操作系统知识点 | Dan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -329,7 +351,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://blog.pisiyuan.top/2017/04/06/java-index/">
+    <link itemprop="mainEntityOfPage" href="http://blog.pisiyuan.top/2017/04/10/interview/os-basics-for-interview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pipi">
@@ -350,7 +372,7 @@
             
             
               
-                Java基础知识点目录
+                操作系统知识点
               
             
           </h1>
@@ -365,8 +387,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-06T19:36:18+08:00">
-                2017 年 04 月 06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T12:41:31+08:00">
+                2017 年 04 月 10
               </time>
             
 
@@ -388,8 +410,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
+                  <a href="/categories/操作系统/" itemprop="url" rel="index">
+                    <span itemprop="name">操作系统</span>
                   </a>
                 </span>
 
@@ -406,8 +428,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/06/java-index/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/06/java-index/" itemprop="commentCount"></span>
+                <a href="/2017/04/10/interview/os-basics-for-interview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/10/interview/os-basics-for-interview/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -415,7 +437,7 @@
 
           
           
-             <span id="/2017/04/06/java-index/" class="leancloud_visitors" data-flag-title="Java基础知识点目录">
+             <span id="/2017/04/10/interview/os-basics-for-interview/" class="leancloud_visitors" data-flag-title="操作系统知识点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,53 +466,73 @@
       
 
       
-        <p>参考资料：</p>
-<ol>
-<li><p><a href="http://docs.oracle.com/javase/specs/jvms/se8/html/index.html" target="_blank" rel="external">《The Java® Virtual Machine Specification(Java SE 8 Edition)》</a><br><a href="http://docs.oracle.com/javase/specs/jvms/se7/html/index.html" target="_blank" rel="external">《Java 虚拟机规范(Java SE 7)》</a><br><a href="http://icyfenix.iteye.com/blog/1256329" target="_blank" rel="external">中文版本</a><br>Java 虚拟机规范 </p>
-</li>
-<li><p><a href="http://docs.oracle.com/javase/specs/jvms/se8/html/index.html" target="_blank" rel="external">《The Java® Virtual Machine Specification(Java SE 8 Edition)》</a><br><a href="http://docs.oracle.com/javase/specs/jls/se7/html/index.html" target="_blank" rel="external">《The Java Language Specification,Java SE 7 Edition》</a><br>Java 语言规范  </p>
-</li>
-<li><p>《Oracle JRockit The Definitive Guide》<br> oracle 出品 JRockit 虚拟机高级使用指南， 2010年7月出版</p>
-</li>
-<li><p>《Inside the Java 2 Virtual Machine,Second Edition》<br> 2000年1月出版，</p>
-</li>
-<li><p>《Java Performance》<br> 只有第3、4、7 章与Java虚拟机相关，是从操作系统到基于Java的上层程序性能度量和调优的全面介绍，其中设计Java虚拟机的内容具备一定的深度和可实践性。  </p>
-</li>
-<li>高级语言虚拟机圈子： 高级语言虚拟机圈子：<a href="http://hllvm.group.iteye.com/" target="_blank" rel="external">http://hllvm.group.iteye.com/</a></li>
+        <h1 id="操作系统部分"><a href="#操作系统部分" class="headerlink" title="操作系统部分"></a>操作系统部分</h1><h2 id="进程、线程、协程、管程-概念和区别"><a href="#进程、线程、协程、管程-概念和区别" class="headerlink" title="进程、线程、协程、管程  概念和区别"></a>进程、线程、协程、管程  概念和区别</h2><p>线程共享堆，同一内存空间</p>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><ol>
+<li>文件、锁</li>
+<li>管道（半双工、父子进程间使用）</li>
+<li>命名管道fifo（半双工、可以在无亲缘关系进程间通信）</li>
+<li>信号量  </li>
+<li>信号  </li>
+<li>消息队列  </li>
+<li>共享内存  （只有映射为0时，内核才删除共享内存）</li>
+<li>套接字  </li>
 </ol>
-<h1 id="Java-体系结构"><a href="#Java-体系结构" class="headerlink" title="Java 体系结构"></a>Java 体系结构</h1><p>传统意义上，Sun官方定义的Java 体系结构包括：</p>
+<h2 id="进程同步和互斥"><a href="#进程同步和互斥" class="headerlink" title="进程同步和互斥"></a>进程同步和互斥</h2><p>###　临界区　和　mutex</p>
+<p>临界区只能在同一进程的线程中使用达到互斥，<br>mutex可以在进程间使用达到互斥</p>
+<p>临界区 是一段代码</p>
+<h3 id="锁、信号量、开关中断-硬件级-、管程-死锁概念"><a href="#锁、信号量、开关中断-硬件级-、管程-死锁概念" class="headerlink" title="锁、信号量、开关中断(硬件级)、管程  死锁概念"></a>锁、信号量、开关中断(硬件级)、管程  死锁概念</h3><h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2><ol>
+<li>分类：<br>软终端、硬中断  </li>
+<li>中断处理机制<br> 请求中断→响应中断→关闭中断→保留断点→中断源识别→保护现场→中断服务子程序→恢复现场→中断返回。</li>
+</ol>
+<h2 id="父子进程共享、fork"><a href="#父子进程共享、fork" class="headerlink" title="父子进程共享、fork"></a>父子进程共享、fork</h2><ol>
+<li>写时复制</li>
+<li>共享代码段</li>
+<li>数据空间、堆栈不同</li>
+<li>文件指针</li>
+<li>实际用户ID、实际组ID、有效用户ID、有效组ID</li>
+<li>添加组ID、进程组ID、会话ID、控制终端</li>
+<li>当前工作目录、根目录、文件屏蔽字、信号屏蔽和排列、环境变量、共享存储段。</li>
+</ol>
+<p>##　页式管理、段式管理、段页式管理。</p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><ol>
+<li>1-范式<br> 属性值不可再分裂成更小的部分</li>
+<li>2-范式<br> 1-范式的基础上，每个属性都依赖于关系模式R中的某个候选键</li>
+<li><p>3-范式<br> 消除了传递依赖的2-范式  </p>
+</li>
+<li><p>BCNF范式<br> 在1-范式的基础上，消除了传递依赖，即每个属性不传递依赖于R的候选键</p>
+</li>
+</ol>
+<h2 id="函数依赖"><a href="#函数依赖" class="headerlink" title="函数依赖"></a>函数依赖</h2><ol>
+<li>平凡依赖<br> X→Y， Y包含X</li>
+<li><p>非平凡依赖<br> X→Y， Y不包含X</p>
+</li>
+<li><p>多值依赖<br> 设R(U)是属性集U上的一个关系模式。X，Y，Z是的U的子集,并且Z=U-X-Y。关系模式R(U)中多值依赖X→→Y成立，当且仅当对R(U)的任一关系r,给定的一对(x，z)值有一组Y的值，这组值仅仅决定于x值而与z值无关。</p>
 <ul>
-<li>Java 程序设计语言</li>
-<li>Java 虚拟机</li>
-<li>Class 文件格式</li>
-<li>Java API 类库</li>
+<li>平凡多值依赖 ，当z为空</li>
+<li>非平凡多值依赖</li>
 </ul>
-<h1 id="Jdk-与-JRE-的关系"><a href="#Jdk-与-JRE-的关系" class="headerlink" title="Jdk 与 JRE 的关系"></a>Jdk 与 JRE 的关系</h1><p><img src="/images/JavaBasic/1.png" alt=""></p>
-<h1 id="Java-的4个版本"><a href="#Java-的4个版本" class="headerlink" title="Java 的4个版本"></a>Java 的4个版本</h1><ul>
-<li>Java Card：支持Java小程序(Applets)运行在小内存设备上。</li>
-<li>Java ME ： 对Java API 有所精简，加入对移动设备的支持。</li>
-<li>Java SE ： 提供完整的Java 核心 API，桌面级应用。</li>
-<li>Java EE ： 企业开发，在Java SE API 之外，增加了大量的扩充并提供了相关的部署支持。</li>
-</ul>
-<p><em>扩展一般以javax.\</em>作为包名， 以java.<em> 为包名的都是Java SE API，后来历史发展，一部分扩展包也被划分为核心包了，所以部分核心包也以javax.</em>为包名*</p>
-<h1 id="Java-发展"><a href="#Java-发展" class="headerlink" title="Java 发展"></a>Java 发展</h1><p>JDK 1.2 中细分为J2EE\J2SE\J2ME三个方向，内置了Classic VM、Hotspot VM、Exact VM(只在solaris平台上)，后两个VM 内置 JIT 编译器。添加了 strictfp 关键字与collections 集合类。</p>
-<p>JDK 1.3 主要改进了类库，JNDI 开始作为一项平台级服务提供，使用 CORBA IIOP 实现 RMI 通信协议， 改进了Java2D API, 新增JavaSound类库。</p>
-<p>JDK 1.4 Java走向成熟的标志！新特性：正则表达式、异常链、NIO、日志类、XML解析器、XSLT转换器等。</p>
-<p>JDK 1.5 主要改进易用性，出现的新特性主要有：自动装箱、泛型、动态注解、枚举、可变长参数、遍历循环(foreach)。在虚拟机和API上，改进了Java的内存模型、提供了java.util.concurrent并发包。</p>
-<p>JDK 1.6 转为 Java EE、 Java SE、 Java ME 的命名方式。提供动态语言支持（内置 mozilla JavaScript rhino引擎），提供编译API 和 微型HTTP服务器API等，同时对Java虚拟机内部改动：锁与同步、垃圾收集、类加载等方面。</p>
-<p>JDK 1.7 新的G1收集器、加强对非Java语言的调用支持，升级类加载架构等。</p>
-<p>JDK 1.8 特性：接口添加非抽象的方法实现(default 关键字)、Lambda表达式、函数式接口、方法构造函数引用、全新的日期API、多重注解。</p>
-<h1 id="Java-虚拟机发展"><a href="#Java-虚拟机发展" class="headerlink" title="Java 虚拟机发展"></a>Java 虚拟机发展</h1><h2 id="Sun-Classic-VM-Exact-VM"><a href="#Sun-Classic-VM-Exact-VM" class="headerlink" title="Sun Classic VM/Exact VM"></a>Sun Classic VM/Exact VM</h2><p>Classic VM刚开始不提供JIT编译器，后来通过外挂的方式提供JIT编译器。JIT编译器会完全接管虚拟机的执行系统，解释器和JIT编译器不能同时工作。VM的虚拟机，它的执行系统已经具备现代高性能虚拟机的雏形：如两级即时编译器、编译器与解释器混合工作模式等。Exact VM因它使用准确式内存管理（Exact Memory Management，也可以叫Non-Conservative/Accurate Memory Management）而得名，即虚拟机可以知道内存中某个位置的数据具体是什么类型。  </p>
-<h2 id="Hotspot-VM"><a href="#Hotspot-VM" class="headerlink" title="Hotspot VM"></a>Hotspot VM</h2><p>优点：热点代码探测技术、JIT编译器、混合的运行时系统。后与JRockit vm 整合，添加JRockit的垃圾回收器、MissionControl服务。</p>
-<h2 id="Sun-Mobile-Embedded-VM-Meta-Circular-VM"><a href="#Sun-Mobile-Embedded-VM-Meta-Circular-VM" class="headerlink" title="Sun Mobile-Embedded VM\Meta-Circular VM"></a>Sun Mobile-Embedded VM\Meta-Circular VM</h2><p>移动设备上的 VM</p>
-<h2 id="BEA-JRockit-IBM-J9-VM"><a href="#BEA-JRockit-IBM-J9-VM" class="headerlink" title="BEA JRockit\IBM J9 VM"></a>BEA JRockit\IBM J9 VM</h2><h2 id="Azul-VM-BEA-Liquid-VM"><a href="#Azul-VM-BEA-Liquid-VM" class="headerlink" title="Azul VM\BEA Liquid VM"></a>Azul VM\BEA Liquid VM</h2><p>Azul VM 专有系统上的VM，Azul systems 公司的 Zing JVM 提供接近Vega系统的特性。 </p>
-<p>Liquid VM 不需要操作系统的支持，越过操作系统直接控制硬件。</p>
-<h2 id="Apache-Harmony-Dalvik-VM"><a href="#Apache-Harmony-Dalvik-VM" class="headerlink" title="Apache Harmony\ Dalvik VM"></a>Apache Harmony\ Dalvik VM</h2><p>这两个都不算正规的VM</p>
-<h2 id="Microsoft-JVM"><a href="#Microsoft-JVM" class="headerlink" title="Microsoft JVM"></a>Microsoft JVM</h2><p>微软的JVM 为了在IE 中支持Java小程序，后来抛弃不开发了。</p>
-<h1 id="混合语言"><a href="#混合语言" class="headerlink" title="混合语言"></a>混合语言</h1><p>Clojure、JRuby、Java、Groovy</p>
-<h1 id="多核并行"><a href="#多核并行" class="headerlink" title="多核并行"></a>多核并行</h1><p>JDK 1.7 加入的包java.util.concurrent.forkjoin 扩充了并发框架java.util.concurrent。fork/join 模式！</p>
-<p>Sumatra 项目提供java接入cpu运算能力的工具。</p>
-<h1 id="64位虚拟机"><a href="#64位虚拟机" class="headerlink" title="64位虚拟机"></a>64位虚拟机</h1><p>64位虚拟机性能比32位差？感觉很奇怪。64位的优点是能够提供更大的内存空间。</p>
+</li>
+</ol>
+<h2 id="游标（回滚操作）"><a href="#游标（回滚操作）" class="headerlink" title="游标（回滚操作）"></a>游标（回滚操作）</h2><h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器　"></a>触发器　</h2><ol>
+<li>事前触发器、事后触发器</li>
+<li>语句级出发、行级触发</li>
+</ol>
+<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="TCP、UDP"><a href="#TCP、UDP" class="headerlink" title="TCP、UDP"></a>TCP、UDP</h2><ol>
+<li>区别<br> TCP 有连接、可靠的字节流服务、超时重发、检验数据、流量控制。 UDP 数据报协议、不可靠</li>
+<li>tcp 特点<br> 快重传、慢启动、超时重传</li>
+<li><p>TCP 3次握手</p>
+</li>
+<li><p>TCP 4次挥手</p>
+</li>
+</ol>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
+<li><h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h1></li>
+</ol>
+<h2 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h2><h2 id="白盒测试"><a href="#白盒测试" class="headerlink" title="白盒测试"></a>白盒测试</h2><h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h1 id="小点"><a href="#小点" class="headerlink" title="小点"></a>小点</h1><ol>
+<li>结构体对齐问题，sizeof()</li>
+<li>内联函数</li>
+<li>宏只是简单的替换</li>
+</ol>
 
       
     </div>
@@ -540,7 +582,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://blog.pisiyuan.top/2017/04/06/java-index/" title="Java基础知识点目录">http://blog.pisiyuan.top/2017/04/06/java-index/</a>
+      <a href="http://blog.pisiyuan.top/2017/04/10/interview/os-basics-for-interview/" title="操作系统知识点">http://blog.pisiyuan.top/2017/04/10/interview/os-basics-for-interview/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -556,7 +598,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java基础/" rel="tag"># java基础</a>
+            <a href="/tags/操作系统/" rel="tag"># 操作系统</a>
           
         </div>
       
@@ -569,8 +611,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/05/interview/interview-wizardquant-1/" rel="next" title="珠海宽德科技面试">
-                <i class="fa fa-chevron-left"></i> 珠海宽德科技面试
+              <a href="/2017/04/06/java-index/" rel="next" title="Java基础知识点目录">
+                <i class="fa fa-chevron-left"></i> Java基础知识点目录
               </a>
             
           </div>
@@ -579,8 +621,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/10/interview/os-basics-for-interview/" rel="prev" title="操作系统知识点">
-                操作系统知识点 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/11/interview/interview-tencent-1/" rel="prev" title="腾讯面试">
+                腾讯面试 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -645,8 +687,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/06/java-index/"
-           data-title="Java基础知识点目录" data-url="http://blog.pisiyuan.top/2017/04/06/java-index/">
+      <div class="ds-thread" data-thread-key="2017/04/10/interview/os-basics-for-interview/"
+           data-title="操作系统知识点" data-url="http://blog.pisiyuan.top/2017/04/10/interview/os-basics-for-interview/">
       </div>
     
   </div>
@@ -770,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-体系结构"><span class="nav-number">1.</span> <span class="nav-text">Java 体系结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Jdk-与-JRE-的关系"><span class="nav-number">2.</span> <span class="nav-text">Jdk 与 JRE 的关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-的4个版本"><span class="nav-number">3.</span> <span class="nav-text">Java 的4个版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-发展"><span class="nav-number">4.</span> <span class="nav-text">Java 发展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-虚拟机发展"><span class="nav-number">5.</span> <span class="nav-text">Java 虚拟机发展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sun-Classic-VM-Exact-VM"><span class="nav-number">5.1.</span> <span class="nav-text">Sun Classic VM/Exact VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hotspot-VM"><span class="nav-number">5.2.</span> <span class="nav-text">Hotspot VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sun-Mobile-Embedded-VM-Meta-Circular-VM"><span class="nav-number">5.3.</span> <span class="nav-text">Sun Mobile-Embedded VM\Meta-Circular VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BEA-JRockit-IBM-J9-VM"><span class="nav-number">5.4.</span> <span class="nav-text">BEA JRockit\IBM J9 VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azul-VM-BEA-Liquid-VM"><span class="nav-number">5.5.</span> <span class="nav-text">Azul VM\BEA Liquid VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-Harmony-Dalvik-VM"><span class="nav-number">5.6.</span> <span class="nav-text">Apache Harmony\ Dalvik VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Microsoft-JVM"><span class="nav-number">5.7.</span> <span class="nav-text">Microsoft JVM</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#混合语言"><span class="nav-number">6.</span> <span class="nav-text">混合语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多核并行"><span class="nav-number">7.</span> <span class="nav-text">多核并行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#64位虚拟机"><span class="nav-number">8.</span> <span class="nav-text">64位虚拟机</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统部分"><span class="nav-number">1.</span> <span class="nav-text">操作系统部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程、线程、协程、管程-概念和区别"><span class="nav-number">1.1.</span> <span class="nav-text">进程、线程、协程、管程  概念和区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程间通信"><span class="nav-number">1.2.</span> <span class="nav-text">进程间通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程同步和互斥"><span class="nav-number">1.3.</span> <span class="nav-text">进程同步和互斥</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁、信号量、开关中断-硬件级-、管程-死锁概念"><span class="nav-number">1.3.1.</span> <span class="nav-text">锁、信号量、开关中断(硬件级)、管程  死锁概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断"><span class="nav-number">1.4.</span> <span class="nav-text">中断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#父子进程共享、fork"><span class="nav-number">1.5.</span> <span class="nav-text">父子进程共享、fork</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范式"><span class="nav-number">2.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数依赖"><span class="nav-number">2.2.</span> <span class="nav-text">函数依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标（回滚操作）"><span class="nav-number">2.3.</span> <span class="nav-text">游标（回滚操作）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发器"><span class="nav-number">2.4.</span> <span class="nav-text">触发器　</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入"><span class="nav-number">2.5.</span> <span class="nav-text">SQL注入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">2.6.</span> <span class="nav-text">索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络"><span class="nav-number">3.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP、UDP"><span class="nav-number">3.1.</span> <span class="nav-text">TCP、UDP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">4.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件测试"><span class="nav-number">5.</span> <span class="nav-text">软件测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#黑盒测试"><span class="nav-number">5.1.</span> <span class="nav-text">黑盒测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#白盒测试"><span class="nav-number">5.2.</span> <span class="nav-text">白盒测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-number">6.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小点"><span class="nav-number">7.</span> <span class="nav-text">小点</span></a></li></ol></div>
             
 
           </div>
