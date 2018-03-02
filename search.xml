@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[解决笔记本上安装Linux的显卡、音频问题]]></title>
+      <url>%2F2018%2F03%2F02%2Fmsi-ubuntu-setup%2F</url>
+      <content type="text"><![CDATA[有显卡弄机器学习、打游戏都方便些，因此新入了有台gtx 1060的微星笔记本。 显卡驱动对于我来说，ubuntu 比 windows 要方便些，但没想到安装后，系统无法进入，应该是显卡驱动的问题。查了之后如下方式解决： 进入 grub 后， 按e进入启动项编辑。 在 splash 后添加 nomodset 参数，使得ubuntu 使用最低分辨率进入系统。 然后在ubuntu自己的附加驱动设置中安装英伟达驱动。 关机破音解决方式： 在/etc/modprobe.d/创建一个 modprobe.conf，在该文件内写入: options snd-hda-intel model=,generic 通过alsamixer 配置音频参数 sudo alsamixer选择sound card（HDA INTEL PCH）设置auto mute 为 disabled另外调整其余出现红色的参数 其他 主题： FlatabulousAdapta 图标主题 La Capitaineultra-flat 鼠标 capitaine]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DL1 Introduction]]></title>
+      <url>%2F2017%2F11%2F28%2Fdeeplearning%2FDL1%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[interview-tencent-2]]></title>
       <url>%2F2017%2F11%2F28%2Finterview%2Finterview-tencent-2%2F</url>
       <content type="text"><![CDATA[研三校招，内推时候面的一、二面，校招时候总监面。一、二面都过了，跪在总监了。哈。 腾讯面试 linux内存调度机制？虚拟地址，段页表 查看tcp连接命令？ netstat -apn 查看内存使用率及内存泄露？ top、jstat、jinfo、jps、jconsole jvm内存管理机制？分代、可达性分析 服务端大量tcp链接进入time_wait 状态，为什么，客户端相应状态是什么？ 服务端关闭tcp链接，客户端是closed mysql 索引类型？ 单列索引、组合索引 组合索引注意什么？ 列组合需要唯一。。。 两台服务器部署app，使用hibernate做orm hibernate的缓存？ 两级缓存 如何确保缓存一致？ 没答出来。 分布式协议？ paxos、gossip 算法题 走n级楼梯，一次只能走1步或2步。问有几种走法？递归就行]]></content>
